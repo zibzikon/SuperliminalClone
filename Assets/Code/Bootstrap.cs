@@ -1,4 +1,5 @@
 using System;
+using Code.Interfaces;
 using UnityEngine;
 using Zenject;
 
@@ -6,10 +7,10 @@ namespace Code.Domain
 {
     public class Bootstrap : MonoBehaviour
     {
-        private GameStateMachine _gameStateMachine;
+        private IGameStateMachine _gameStateMachine;
 
         [Inject]
-        public void Initialize(GameStateMachine gameStateMachine)
+        public void Initialize(IGameStateMachine gameStateMachine)
         {
             _gameStateMachine = gameStateMachine;
         }

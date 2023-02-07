@@ -6,35 +6,35 @@ namespace Code.Domain.Infrastructure
 {
     public class LevelLoader : ILevelLoader
     {
-        public AsyncOperation LoadingAsyncOperation { get; private set; }
+        public AsyncOperation LevelLoadingAsyncOperation { get; private set; }
         
         private readonly ISceneLoader _sceneLoader;
-        private readonly ILevelSceneContextContainer _levelSceneContextContainer;
+        private readonly ILevelSceneLoadingContext _levelSceneLoadingContext;
 
-        public LevelLoader(ISceneLoader sceneLoader, ILevelSceneContextContainer levelSceneContextContainer)
+        public LevelLoader(ISceneLoader sceneLoader, ILevelSceneLoadingContext levelSceneLoadingContext)
         {
             _sceneLoader = sceneLoader;
-            _levelSceneContextContainer = levelSceneContextContainer;
+            _levelSceneLoadingContext = levelSceneLoadingContext;
         }
         
-        
-        public AsyncOperation LoadAsync(LevelData levelData)
+        public async Task LoadAsync(LevelData levelData)
         {
-            var loadingSceneAsyncOperation = _sceneLoader.LoadSceneAsync(levelData.SceneName);
+            _ = _sceneLoader.LoadSceneAsync(levelData.SceneName);
             
-            LoadAsyncInternal(levelData);
+            LevelLoadingAsyncOperation = _sceneLoader.SceneLoadingAsyncOperation;
             
-            return loadingSceneAsyncOperation;
-        }
-
-        private async void LoadAsyncInternal(LevelData levelData)
-        {
-            var taskCompletionSource = new TaskCompletionSource<ILevelSceneContext>();
-
-            _levelSceneContextContainer.LevelSceneContextChanged += result => { taskCompletionSource.SetResult(result); };
-            var levelSceneContext = await taskCompletionSource.Task;
+            var levelSceneContext = await WaitForLevelSceneLoaded();
             
             levelSceneContext.SetLevelData(levelData);
+        }
+
+        private Task<ILevelScene> WaitForLevelSceneLoaded()
+        {
+            var taskCompletionSource = new TaskCompletionSource<ILevelScene>();
+
+            _levelSceneLoadingContext.LevelSceneContextChanged += result => { taskCompletionSource.SetResult(result); };
+            
+            return taskCompletionSource.Task;
         }
     }
 }

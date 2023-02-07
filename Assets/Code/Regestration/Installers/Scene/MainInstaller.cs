@@ -7,10 +7,12 @@ namespace Code.Domain.Regestration.Installers.Scene.MainMenuScene
     public class MainInstaller : MonoInstaller
     {
         [SerializeField] private MainMediator _mainMediator;
+        [SerializeField] private SceneManagement.Scene _mainContext;
         
         public override void InstallBindings()
         {
-            Container.BindInstance(_mainMediator);
+            Container.Bind<MainMediator>().FromInstance(_mainMediator).AsSingle();
+            Container.BindInstance(_mainContext);
         }
     }
 }

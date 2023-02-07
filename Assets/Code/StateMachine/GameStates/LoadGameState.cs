@@ -24,14 +24,17 @@ namespace Code
         
         public async void Enter()
         {
-            var asyncOperation = _sceneLoader.LoadSceneAsync(_gameStaticData.MainMenuSceneName);
-            _sceneLoadingVisualizer.StartVisualising(asyncOperation);
-            await asyncOperation;
+            var sceneLoadingTask = _sceneLoader.LoadSceneAsync(_gameStaticData.MainMenuSceneName);
+            _sceneLoadingVisualizer.StartVisualising(_sceneLoader.SceneLoadingAsyncOperation);
+            
+            await sceneLoadingTask;
+            
             _gameStateMachine.SwitchState<MainMenuState>();
         }
 
         public void Exit()
         {
+            
         }
     }
 }

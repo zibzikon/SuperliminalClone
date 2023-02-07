@@ -1,3 +1,4 @@
+using Code.Domain;
 using Code.Domain.Mediators;
 using Code.Interfaces;
 
@@ -5,21 +6,23 @@ namespace Code
 {
     public class MainMenuState : IGameState
     {
-        private readonly MainMediator _mainMediator;
+        private readonly IMainMenuFactory _mainMenuFactory;
+        private IMainMenu _mainMenu;
 
-        public MainMenuState(MainMediator mainMediator)
+        public MainMenuState(IMainMenuFactory mainMenuFactory)
         {
-            _mainMediator = mainMediator;
+            _mainMenuFactory = mainMenuFactory;
         }
         
         public void Enter()
         {
-            _mainMediator.ShowMainMenu();
+            _mainMenu = _mainMenuFactory.Create();
+            _mainMenu.Mediator.ShowMainMenu();
         }
 
         public void Exit()
         {
-            _mainMediator.HideMainMenu();
+            _mainMenu.Mediator.HideMainMenu();
         }
     }
 }
