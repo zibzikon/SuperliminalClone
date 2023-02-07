@@ -5,25 +5,26 @@ using Code.Domain.Data.Static;
 using Code.Domain.Factories;
 using Code.Domain.Infrastructure.Interfaces;
 using Code.Domain.UI.Interfaces;
-using Code.Domain.Visualisation;
-using UnityEngine;
+using Code.Infrastructure;
 
 namespace Code.Domain.Regestration.Installers
 {
     public class SceneTransitionWindowFactory : ISceneTransitionWindowFactory
     {
         private readonly IAssetsProvider _assetsProvider;
+        private readonly IViewService _viewService;
         private readonly Dictionary<SceneTransitionType, SceneTransitionStaticData> _transitions;
 
         public SceneTransitionWindowFactory(IAssetsProvider assetsProvider,
-            IEnumerable<SceneTransitionStaticData> transitions)
+            IEnumerable<SceneTransitionStaticData> transitions, IViewService viewService)
         {
             _assetsProvider = assetsProvider;
+            _viewService = viewService;
             _transitions = transitions.ToDictionary(x => x.TransitionType);
         }
 
         public SceneTransitionWindow Get(SceneTransitionType type)
-            => Object.Instantiate(_assetsProvider
+            => _viewService.CreateView(_assetsProvider
                 .Get<SceneTransitionWindow>(_transitions[type].TransitionAssetName));
     }
 }

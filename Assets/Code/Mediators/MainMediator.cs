@@ -4,12 +4,9 @@ namespace Code.Domain.Mediators
 {
     public class MainMediator : MonoBehaviour
     {
-        public void ShowMainMenu()
-        {
-        }
-
-        public void HideMainMenu()
-        {
-        }
+        [SerializeField] private Transform _mainMenuWindowTransform;
+        
+        public void ShowMainMenu() => _mainMenuWindowTransform.gameObject.SetActive(true);
+        public void HideMainMenu() => _mainMenuWindowTransform.gameObject.SetActive(true);
     }
 }

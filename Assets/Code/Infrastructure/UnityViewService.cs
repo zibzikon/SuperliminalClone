@@ -31,8 +31,8 @@ namespace Code.Infrastructure
         
         public void Cleanup()
         {
-            _unityViews.ForEach(x => Object.Destroy(x.GameObject()));
-            _uis.ForEach(x => Object.Destroy(x.GameObject()));
+            _unityViews.ForEach(Object.Destroy);
+            _uis.ForEach(Object.Destroy);
         }
 
         private static Transform CreateUnityViewRootTransform() =>
