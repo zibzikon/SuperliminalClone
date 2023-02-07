@@ -2,6 +2,7 @@ using Code.Domain.Factories;
 using Code.Domain.Infrastructure;
 using Code.Domain.Infrastructure.Interfaces;
 using Code.Domain.Visualisation;
+using Code.Infrastructure;
 using Code.Interfaces;
 using Zenject;
 
@@ -13,6 +14,7 @@ namespace Code.Domain.Regestration.Installers
         {
             Container.Bind<IGameStateMachine>().To<GameStateMachine>().AsSingle();
             Container.Bind<IAssetsProvider>().To<ResourcesBasedAssetsProvider>().AsSingle();
+            Container.Bind<IViewService>().To<UnityViewService>().AsSingle();
             Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
             Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
             

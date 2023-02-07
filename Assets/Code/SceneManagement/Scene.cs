@@ -11,7 +11,7 @@ namespace Code.Domain.SceneManagement
         private ISceneLoadingContext _sceneLoadingContext;
 
         [Inject]
-        public void Initialize(ISceneLoadingContext sceneLoadingContext, MainMediator mainMediator)
+        public void Initialize(ISceneLoadingContext sceneLoadingContext)
         {
             _sceneLoadingContext = sceneLoadingContext;
         }
