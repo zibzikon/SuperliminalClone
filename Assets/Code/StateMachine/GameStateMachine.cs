@@ -1,6 +1,7 @@
-using Code.Interfaces;
+using Code.Factories.Interfaces;
+using Code.StateMachine.Interfaces;
 
-namespace Code
+namespace Code.StateMachine
 {
     public class GameStateMachine : IGameStateMachine
     {

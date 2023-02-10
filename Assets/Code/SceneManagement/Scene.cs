@@ -1,10 +1,9 @@
-using Code.Domain.Infrastructure;
-using Code.Domain.Mediators;
-using Code.Domain.SceneManagement.Interfaces;
+using Code.Infrastructure.Interfaces;
+using Code.SceneManagement.Interfaces;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Domain.SceneManagement
+namespace Code.SceneManagement
 {
     public class Scene : MonoBehaviour, IScene
     {

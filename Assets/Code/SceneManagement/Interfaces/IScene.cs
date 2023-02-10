@@ -1,4 +1,4 @@
-namespace Code.Domain.SceneManagement.Interfaces
+namespace Code.SceneManagement.Interfaces
 {
     public interface IScene
     {

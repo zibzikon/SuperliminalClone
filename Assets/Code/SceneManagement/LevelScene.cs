@@ -1,8 +1,10 @@
-using Code.Domain.Infrastructure;
+using Code.Data;
+using Code.Infrastructure.Interfaces;
+using Code.SceneManagement.Interfaces;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Domain
+namespace Code.SceneManagement
 {
     public class LevelScene : MonoBehaviour , ILevelScene
     {

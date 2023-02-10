@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Code.Domain;
-using Code.Domain.Extensions;
+using Code.Extensions;
+using Code.Infrastructure.Interfaces;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;

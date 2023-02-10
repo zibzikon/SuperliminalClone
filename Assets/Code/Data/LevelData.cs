@@ -1,13 +1,17 @@
-using System;
-using UnityEngine;
+using Code.Data.ResourcesData.Enums;
 
-namespace Code.Domain
+namespace Code.Data
 {
-    [Serializable]
-    public struct LevelData 
+    public struct LevelData
     {
-        [field: SerializeField] public string SceneName { get; private set; }
-        [field: SerializeField] public int Index { get; private set; }
-        [field: SerializeField] public LevelState State { get; set; }
+        public readonly int Index;
+        public LevelState State { get; set; }
+
+        public LevelData(int index, LevelState state)
+        {
+            Index = index;
+            State = state;
+        }
+        
     }
 }

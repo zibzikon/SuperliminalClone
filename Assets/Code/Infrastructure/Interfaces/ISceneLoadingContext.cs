@@ -1,7 +1,7 @@
 using System;
-using Code.Domain.SceneManagement.Interfaces;
+using Code.SceneManagement.Interfaces;
 
-namespace Code.Domain.Infrastructure
+namespace Code.Infrastructure.Interfaces
 {
     public interface ISceneLoadingContext
     {

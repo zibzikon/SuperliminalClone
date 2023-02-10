@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
+using Random = UnityEngine.Random;
 
-namespace Code.Domain.Extensions
+namespace Code.Extensions
 {
     public static class EnumerableExtensions
     {
@@ -16,5 +17,11 @@ namespace Code.Domain.Extensions
         public static IEnumerable<T> ToTypedEnumerable<T>(this IEnumerable enumerable) 
             => enumerable as T[] ?? enumerable.Cast<T>().ToArray();
         
+        public static void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action)
+        {
+            foreach (var value in enumerable)
+                action(value);
+        }
+
     }
 }

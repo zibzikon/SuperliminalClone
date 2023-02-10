@@ -1,4 +1,6 @@
-namespace Code.Interfaces
+using Code.StateMachine.Interfaces;
+
+namespace Code.Factories.Interfaces
 {
     public interface IGameStateFactory
     {

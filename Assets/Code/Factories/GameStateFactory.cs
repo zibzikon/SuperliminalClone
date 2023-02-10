@@ -1,7 +1,8 @@
-using Code.Interfaces;
+using Code.Factories.Interfaces;
+using Code.StateMachine.Interfaces;
 using Zenject;
 
-namespace Code.Domain.Regestration.Installers
+namespace Code.Factories
 {
     public class GameStateFactory : IGameStateFactory
     {

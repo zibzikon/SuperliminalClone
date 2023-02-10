@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Domain.Visualisation
+namespace Code.Visualisation.Interfaces
 {
     public interface ISceneLoadingVisualizer
     {

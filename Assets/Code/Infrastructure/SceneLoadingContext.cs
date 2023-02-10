@@ -1,8 +1,8 @@
 using System;
-using Code.Domain.Infrastructure;
-using Code.Domain.SceneManagement.Interfaces;
+using Code.Infrastructure.Interfaces;
+using Code.SceneManagement.Interfaces;
 
-namespace Code.Domain.Regestration.Installers
+namespace Code.Infrastructure
 {
     public class SceneLoadingContext : ISceneLoadingContext
     {

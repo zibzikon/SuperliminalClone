@@ -1,4 +1,6 @@
-namespace Code.Domain
+using Code.Data;
+
+namespace Code.SceneManagement.Interfaces
 {
     public interface ILevelScene
     {

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Code.Domain.Visualisation
+namespace Code.Visualisation.Interfaces
 {
     public interface ISceneTransition
     {

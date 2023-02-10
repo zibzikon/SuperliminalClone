@@ -1,6 +1,6 @@
 using System;
 
-namespace Code.Domain.Extensions
+namespace Code.Extensions
 {
     public static class CleanCodeExtensions
     {

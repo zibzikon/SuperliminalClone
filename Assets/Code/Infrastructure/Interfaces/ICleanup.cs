@@ -1,4 +1,4 @@
-namespace Code.Infrastructure
+namespace Code.Infrastructure.Interfaces
 {
     public interface ICleanup
     {

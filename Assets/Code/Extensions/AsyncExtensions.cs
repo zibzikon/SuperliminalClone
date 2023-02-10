@@ -1,9 +1,8 @@
-using System;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Code.Domain.Extensions
+namespace Code.Extensions
 {
     public static class AsyncExtensions
     {

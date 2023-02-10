@@ -1,11 +1,9 @@
-using System;
 using System.Threading.Tasks;
-using Code.Domain.Visualisation;
-using TMPro;
+using Code.Visualisation.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Code.Domain.UI.Interfaces
+namespace Code.UI.Windows
 {
     [RequireComponent(typeof(Animator))]
     public class SceneTransitionWindow : MonoBehaviour , ISceneTransition
@@ -43,7 +41,5 @@ namespace Code.Domain.UI.Interfaces
             _animationEnded.SetResult(true);
             _animationEnded = new TaskCompletionSource<bool>();
         }
-        
-       
     }
 }

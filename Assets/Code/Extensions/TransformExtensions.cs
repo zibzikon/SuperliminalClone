@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Domain.Extensions
+namespace Code.Extensions
 {
     public static class TransformExtensions
     {

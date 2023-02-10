@@ -1,9 +1,9 @@
-using System;
-using Code.Interfaces;
+using Code.StateMachine.GameStates;
+using Code.StateMachine.Interfaces;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Domain
+namespace Code
 {
     public class Bootstrap : MonoBehaviour
     {

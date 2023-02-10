@@ -1,14 +1,15 @@
 using System;
 using System.Threading.Tasks;
-using Code.Domain.Data.Static;
-using Code.Domain.Extensions;
-using Code.Domain.Factories;
-using Code.Domain.UI.Interfaces;
+using Code.Data.ResourcesData.Enums;
+using Code.Extensions;
+using Code.Factories.Interfaces.UI;
+using Code.UI.Windows;
+using Code.Visualisation.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-namespace Code.Domain.Visualisation
+namespace Code.Visualisation
 {
     public class SceneLoadingVisualizer : ISceneLoadingVisualizer
     {

@@ -1,6 +1,7 @@
 using System;
+using Code.SceneManagement.Interfaces;
 
-namespace Code.Domain.Infrastructure
+namespace Code.Infrastructure.Interfaces
 {
     public interface ILevelSceneLoadingContext
     {

@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
-using Code.Domain.Extensions;
-using Code.Domain.Infrastructure.Interfaces;
+using Code.Extensions;
+using Code.Infrastructure.Interfaces;
 using UnityEngine;
 
-namespace Code.Domain.Infrastructure
+namespace Code.Infrastructure
 {
     public class ResourcesBasedAssetsProvider : IAssetsProvider
     {

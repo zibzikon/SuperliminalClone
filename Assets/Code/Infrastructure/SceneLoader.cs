@@ -1,11 +1,10 @@
 using System.Threading.Tasks;
-using Code.Domain.Extensions;
-using Code.Domain.Infrastructure.Interfaces;
-using Code.Domain.SceneManagement.Interfaces;
+using Code.Infrastructure.Interfaces;
+using Code.SceneManagement.Interfaces;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Code.Domain.Infrastructure
+namespace Code.Infrastructure
 {
     public class SceneLoader : ISceneLoader
     {
