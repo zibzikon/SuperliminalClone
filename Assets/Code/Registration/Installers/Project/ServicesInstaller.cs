@@ -32,7 +32,7 @@ namespace Code.Registration.Installers.Project
             Container.Bind<IViewService>().To<UnityViewService>().AsSingle();
             Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
             Container.Bind<ILevelLoader>().To<LevelLoaderWithLoadingVisualization>().AsSingle();
-            Container.Bind<IIdentifierGenerator>().To<IIdentifierGenerator>().AsSingle();
+            Container.Bind<IIdentifierGenerator>().To<IdentifierGenerator>().AsSingle();
             
             Container.Bind<ISceneLoadingVisualizer>().To<SceneLoadingVisualizer>().AsSingle();
             
