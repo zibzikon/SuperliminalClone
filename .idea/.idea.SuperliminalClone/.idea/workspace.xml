@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="Created: FullGameFeature for systems registration">
+    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="Fix: Changed GamePlayFeature installing to FullGameFeature in LevelFeaturesInstaller">
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/Debug.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/Debug/Code.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/Debug/Code/GamePlay.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/InjectableFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/InjectableFeature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Registration/Installers/Scene/LevelFeaturesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Registration/Installers/Scene/LevelFeaturesInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/InteractableAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/InteractableAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/InteractedBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Debug/Code/GamePlay/InteractedBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/InteractedBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Debug/Code/GamePlay/InteractedBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Door/Door.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Door/Door.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +42,10 @@
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Extensions/CleanCodeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/Behaviours/SelfInitializedView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/LevelController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/SystemsRegistration/InjectableFeature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/UnityViewController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Generated/Game/GameComponentsLookup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Registration/Installers/Scene/LevelFeaturesInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Registration/Installers/Scene/ViewsInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Scenes/Levels/Level_1.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -120,7 +128,7 @@
       <updated>1676568454295</updated>
       <workItem from="1676568456315" duration="800000" />
       <workItem from="1676573663038" duration="2418000" />
-      <workItem from="1676640757782" duration="10992000" />
+      <workItem from="1676640757782" duration="11536000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676573812761</created>
@@ -150,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676667092217</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix: Changed GamePlayFeature installing to FullGameFeature in LevelFeaturesInstaller">
+      <created>1676667281927</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676667281927</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +192,8 @@
     <MESSAGE value="Fix: Corrected IIdentifierGenerator registration im ServicesInstaller.cs" />
     <MESSAGE value="Fix: Add scenes to build setting" />
     <MESSAGE value="Created: FullGameFeature for systems registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created: FullGameFeature for systems registration" />
+    <MESSAGE value="Fix: Changed GamePlayFeature installing to FullGameFeature in LevelFeaturesInstaller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Changed GamePlayFeature installing to FullGameFeature in LevelFeaturesInstaller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

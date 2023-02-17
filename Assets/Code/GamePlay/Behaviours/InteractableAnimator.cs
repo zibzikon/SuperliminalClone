@@ -11,6 +11,6 @@ namespace Code.Game.Behaviours
             => _animator.SetBool(_isInteractingKeyName, true);    
         
         public void PlayExitInteractionAnimation()
-            => _animator.SetBool(_isInteractingKeyName, true);
+            => _animator.SetBool(_isInteractingKeyName, false);
     }
 }

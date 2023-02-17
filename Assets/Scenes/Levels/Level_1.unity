@@ -2003,11 +2003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c53e8494fc1490f9d2e6b54ee775020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &488377933 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2420274908898109463, guid: e5130c9d5f26e8c4ba3100b7cb7a9ca2, type: 3}
-  m_PrefabInstance: {fileID: 2420274908546573914}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &501878725
 GameObject:
   m_ObjectHideFlags: 0
@@ -12287,6 +12282,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2038562680}
+    - target: {fileID: 2420274908106643884, guid: e5130c9d5f26e8c4ba3100b7cb7a9ca2, type: 3}
+      propertyPath: m_VersionIndex
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2420274908106643886, guid: e5130c9d5f26e8c4ba3100b7cb7a9ca2, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12295,10 +12294,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
-    - target: {fileID: 2420274908898109460, guid: e5130c9d5f26e8c4ba3100b7cb7a9ca2, type: 3}
-      propertyPath: _animator
-      value: 
-      objectReference: {fileID: 488377933}
     - target: {fileID: 2420274908898109462, guid: e5130c9d5f26e8c4ba3100b7cb7a9ca2, type: 3}
       propertyPath: m_RootOrder
       value: 3
