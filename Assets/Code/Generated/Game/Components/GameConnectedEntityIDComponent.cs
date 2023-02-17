@@ -6,21 +6,24 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.GamePlay.Components;
+
 public partial class GameEntity {
 
-    public Code.Game.Components.ConnectedEntityID connectedEntityID { get { return (Code.Game.Components.ConnectedEntityID)GetComponent(GameComponentsLookup.ConnectedEntityID); } }
+    public ConnectedEntityID connectedEntityID { get { return (ConnectedEntityID)GetComponent(GameComponentsLookup.ConnectedEntityID); } }
     public bool hasConnectedEntityID { get { return HasComponent(GameComponentsLookup.ConnectedEntityID); } }
 
     public void AddConnectedEntityID(int newValue) {
         var index = GameComponentsLookup.ConnectedEntityID;
-        var component = (Code.Game.Components.ConnectedEntityID)CreateComponent(index, typeof(Code.Game.Components.ConnectedEntityID));
+        var component = (ConnectedEntityID)CreateComponent(index, typeof(ConnectedEntityID));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceConnectedEntityID(int newValue) {
         var index = GameComponentsLookup.ConnectedEntityID;
-        var component = (Code.Game.Components.ConnectedEntityID)CreateComponent(index, typeof(Code.Game.Components.ConnectedEntityID));
+        var component = (ConnectedEntityID)CreateComponent(index, typeof(ConnectedEntityID));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }

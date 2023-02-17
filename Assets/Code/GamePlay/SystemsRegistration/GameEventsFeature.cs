@@ -1,6 +1,6 @@
 using Zenject;
 
-namespace Code.Game.SystemsRegistration
+namespace Code.GamePlay.SystemsRegistration
 {
     public class GameEventsFeature : InjectableFeature
     {

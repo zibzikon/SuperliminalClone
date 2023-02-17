@@ -1,10 +1,10 @@
-using Code.Game.Interfaces;
+using Code.GamePlay.Interfaces;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
 using static Entitas.CodeGeneration.Attributes.EventTarget;
 
-namespace Code.Game.Components
+namespace Code.GamePlay.Components
 {
     [Game]
     public class Door : IComponent { }

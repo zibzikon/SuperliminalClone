@@ -3,7 +3,7 @@ using Code.Infrastructure.Interfaces;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Game.Contexts
+namespace Code.GamePlay.Contexts
 {
     public class SceneContext : MonoBehaviour, ISceneContext
     {

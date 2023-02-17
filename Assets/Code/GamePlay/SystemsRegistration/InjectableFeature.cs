@@ -1,9 +1,8 @@
 using Code.Extensions;
-using Code.Game.Systems;
 using Entitas;
 using Zenject;
 
-namespace Code.Game.SystemsRegistration
+namespace Code.GamePlay.SystemsRegistration
 {
     public abstract class InjectableFeature : Feature
     {

@@ -2,7 +2,7 @@ using Code.Mediators;
 using Code.UI.Windows;
 using UnityEngine;
 using Zenject;
-using SceneContext = Code.Game.Contexts.SceneContext;
+using SceneContext = Code.GamePlay.Contexts.SceneContext;
 
 namespace Code.Registration.Installers.Scene
 {

@@ -1,7 +1,7 @@
-using Code.Game.Systems;
+using Code.GamePlay.Systems;
 using Zenject;
 
-namespace Code.Game.SystemsRegistration
+namespace Code.GamePlay.SystemsRegistration
 {
     public class GamePlayFeature : InjectableFeature
     {

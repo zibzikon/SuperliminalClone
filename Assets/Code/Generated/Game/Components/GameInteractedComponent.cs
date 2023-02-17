@@ -6,9 +6,12 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.GamePlay.Components;
+
 public partial class GameEntity {
 
-    static readonly Code.Game.Components.Interacted interactedComponent = new Code.Game.Components.Interacted();
+    static readonly Interacted interactedComponent = new Interacted();
 
     public bool isInteracted {
         get { return HasComponent(GameComponentsLookup.Interacted); }

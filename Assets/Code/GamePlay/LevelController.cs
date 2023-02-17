@@ -1,9 +1,8 @@
-using System;
-using Code.Game.SystemsRegistration;
+using Code.GamePlay.SystemsRegistration;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Game
+namespace Code.GamePlay
 {
     public class LevelController : MonoBehaviour
     {

@@ -1,6 +1,4 @@
-using Entitas;
-
-namespace Code.Game.Interfaces
+namespace Code.GamePlay.Interfaces
 {
     public interface IViewController
     {

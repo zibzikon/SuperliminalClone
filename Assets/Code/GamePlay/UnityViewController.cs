@@ -1,11 +1,10 @@
-using System;
 using Code.Attributes.Injection;
-using Code.Game.Interfaces;
+using Code.GamePlay.Interfaces;
 using Code.Services.Interfaces;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Game.ViewVisteners
+namespace Code.GamePlay
 {
     [ImplicitInjectableView]
     public class UnityViewController : MonoBehaviour, IViewController

@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.GamePlay.Components;
+
 public static class GameComponentsLookup {
 
     public const int ConnectedEntityID = 0;
@@ -33,14 +36,14 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Code.Game.Components.ConnectedEntityID),
-        typeof(Code.Game.Components.Door),
-        typeof(Code.Game.Components.Id),
-        typeof(Code.Game.Components.Interactable),
-        typeof(Code.Game.Components.Interacted),
-        typeof(Code.Game.Components.PressurePlate),
-        typeof(Code.Game.Components.ViewComponent),
-        typeof(Code.Game.Components.ViewControllerComponent),
+        typeof(ConnectedEntityID),
+        typeof(Door),
+        typeof(Id),
+        typeof(Interactable),
+        typeof(Interacted),
+        typeof(PressurePlate),
+        typeof(ViewComponent),
+        typeof(ViewControllerComponent),
         typeof(InteractedListenerComponent)
     };
 }

@@ -3,7 +3,7 @@ using Code.Game.Interfaces;
 using Code.Infrastructure.Interfaces;
 using Zenject;
 
-namespace Code.Game.Contexts
+namespace Code.GamePlay.Contexts
 {
     public class LevelContext : SceneContext, ILevelContext
     {

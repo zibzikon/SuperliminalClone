@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Game.Behaviours
+namespace Code.GamePlay.Behaviours
 {
     public class InteractableAnimator : MonoBehaviour
     {

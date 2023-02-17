@@ -6,21 +6,24 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.GamePlay.Components;
+
 public partial class GameEntity {
 
-    public Code.Game.Components.Id id { get { return (Code.Game.Components.Id)GetComponent(GameComponentsLookup.Id); } }
+    public Id id { get { return (Id)GetComponent(GameComponentsLookup.Id); } }
     public bool hasId { get { return HasComponent(GameComponentsLookup.Id); } }
 
     public void AddId(int newValue) {
         var index = GameComponentsLookup.Id;
-        var component = (Code.Game.Components.Id)CreateComponent(index, typeof(Code.Game.Components.Id));
+        var component = (Id)CreateComponent(index, typeof(Id));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceId(int newValue) {
         var index = GameComponentsLookup.Id;
-        var component = (Code.Game.Components.Id)CreateComponent(index, typeof(Code.Game.Components.Id));
+        var component = (Id)CreateComponent(index, typeof(Id));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }

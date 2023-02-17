@@ -1,9 +1,9 @@
-using Code.Game.Behaviours;
-using Code.Game.Interfaces;
+using Code.GamePlay.Behaviours;
+using Code.GamePlay.Interfaces;
 using Entitas;
 using UnityEngine;
 
-namespace Code.Game.ViewVisteners
+namespace Code.GamePlay.ViewListeners
 {
     public class InteractedListener : MonoBehaviour, IInteractedListener, IEventListener
     {

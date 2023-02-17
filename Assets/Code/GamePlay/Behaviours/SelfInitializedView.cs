@@ -3,7 +3,7 @@ using Code.Extensions;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Game.ViewVisteners
+namespace Code.GamePlay.Behaviours
 {
     [RequireComponent(typeof(UnityViewController))]
     [ImplicitInjectableView]

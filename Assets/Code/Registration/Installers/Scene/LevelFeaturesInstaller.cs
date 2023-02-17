@@ -1,4 +1,4 @@
-using Code.Game.SystemsRegistration;
+using Code.GamePlay.SystemsRegistration;
 using Zenject;
 
 namespace Code.Registration.Installers.Scene

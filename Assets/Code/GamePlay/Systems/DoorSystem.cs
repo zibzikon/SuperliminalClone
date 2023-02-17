@@ -1,6 +1,6 @@
 using Entitas;
 
-namespace Code.Game.Systems
+namespace Code.GamePlay.Systems
 {
     public class DoorSystem : IExecuteSystem
     {

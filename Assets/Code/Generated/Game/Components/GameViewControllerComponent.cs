@@ -6,21 +6,25 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.GamePlay.Components;
+using Code.GamePlay.Interfaces;
+
 public partial class GameEntity {
 
-    public Code.Game.Components.ViewControllerComponent viewController { get { return (Code.Game.Components.ViewControllerComponent)GetComponent(GameComponentsLookup.ViewController); } }
+    public ViewControllerComponent viewController { get { return (ViewControllerComponent)GetComponent(GameComponentsLookup.ViewController); } }
     public bool hasViewController { get { return HasComponent(GameComponentsLookup.ViewController); } }
 
-    public void AddViewController(Code.Game.Interfaces.IViewController newValue) {
+    public void AddViewController(IViewController newValue) {
         var index = GameComponentsLookup.ViewController;
-        var component = (Code.Game.Components.ViewControllerComponent)CreateComponent(index, typeof(Code.Game.Components.ViewControllerComponent));
+        var component = (ViewControllerComponent)CreateComponent(index, typeof(ViewControllerComponent));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceViewController(Code.Game.Interfaces.IViewController newValue) {
+    public void ReplaceViewController(IViewController newValue) {
         var index = GameComponentsLookup.ViewController;
-        var component = (Code.Game.Components.ViewControllerComponent)CreateComponent(index, typeof(Code.Game.Components.ViewControllerComponent));
+        var component = (ViewControllerComponent)CreateComponent(index, typeof(ViewControllerComponent));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }

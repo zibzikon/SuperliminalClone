@@ -6,9 +6,12 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Code.GamePlay.Components;
+
 public partial class GameEntity {
 
-    static readonly Code.Game.Components.Door doorComponent = new Code.Game.Components.Door();
+    static readonly Door doorComponent = new Door();
 
     public bool isDoor {
         get { return HasComponent(GameComponentsLookup.Door); }
