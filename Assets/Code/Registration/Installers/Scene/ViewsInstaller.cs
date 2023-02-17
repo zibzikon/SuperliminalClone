@@ -12,12 +12,13 @@ namespace Code.Registration.Installers.Scene
     {
         public override void InstallBindings()
         {
-            FindInjectableViews().ForEach(x => Container.BindInstance(x));
+            foreach (var injectable in FindInjectableViews())
+                Container.BindInstance(injectable);
         }
 
         private IEnumerable<object> FindInjectableViews() =>
             FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.InstanceID)
-                .Where(x => x.HaveCustomAttribute<ImplicitInjectableAttribute>());
+                .Where(x => x.HaveCustomAttribute<ImplicitInjectableViewAttribute>());
 
     }
 }

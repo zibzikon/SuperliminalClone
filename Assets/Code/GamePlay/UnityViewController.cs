@@ -1,3 +1,4 @@
+using System;
 using Code.Attributes.Injection;
 using Code.Game.Interfaces;
 using Code.Services.Interfaces;
@@ -6,7 +7,7 @@ using Zenject;
 
 namespace Code.Game.ViewVisteners
 {
-    [ImplicitInjectable]
+    [ImplicitInjectableView]
     public class UnityViewController : MonoBehaviour, IViewController
     {
         private IIdentifierGenerator _identifierGenerator;
@@ -21,6 +22,10 @@ namespace Code.Game.ViewVisteners
         public void Initialize(GameEntity entity, GameContext context)
         {
             Entity = entity;
+        }
+
+        private void Start()
+        {
             Entity.AddId(_identifierGenerator.GetNext());
         }
 

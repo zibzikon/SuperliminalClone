@@ -18,6 +18,6 @@ namespace Code.Game.Behaviours
 
         private void Start() => OnStart();
 
-        protected abstract void OnStart();
+        protected virtual void OnStart() { }
     }
 }

@@ -25,6 +25,8 @@ namespace Code.Game.ViewVisteners
                 _animator.PlayEnterInteractionAnimation();
             else
                 _animator.PlayExitInteractionAnimation();
+            
+            entity.isInteracted = false;
         }
     }
 }

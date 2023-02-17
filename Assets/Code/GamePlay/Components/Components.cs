@@ -2,6 +2,7 @@ using Code.Game.Interfaces;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
+using static Entitas.CodeGeneration.Attributes.EventTarget;
 
 namespace Code.Game.Components
 {
@@ -12,13 +13,12 @@ namespace Code.Game.Components
     public class PressurePlate : IComponent { }
 
     public class Interactable : IComponent { }
-
-    [Event(EventTarget.Self), Cleanup(CleanupMode.RemoveComponent)]
-    public class Interacted : IComponent { }
     
     public class ViewComponent : IComponent { public GameObject Value; }
     public class ViewControllerComponent : IComponent { public IViewController Value; }
 
     public class Id : IComponent { [PrimaryEntityIndex] public int Value; }
     public class ConnectedEntityID : IComponent { [EntityIndex] public int Value; }
+    
+    [Game, Event(Self)] public class Interacted : IComponent { }
 }

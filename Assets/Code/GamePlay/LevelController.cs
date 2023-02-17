@@ -7,25 +7,23 @@ namespace Code.Game
 {
     public class LevelController : MonoBehaviour
     {
-        private GamePlayFeature _gamePlayFeature;
-        private Entitas.Systems _systems;
+        private readonly Entitas.Systems _systems = new ();
         
         [Inject]
-        public void Construct(GamePlayFeature gamePlayFeature)
+        public void Construct(FullGameFeature gameFeature)
         {
-            _gamePlayFeature = gamePlayFeature;
+            _systems.Add(gameFeature);
         }
 
-        private void Awake()
+        private void Start()
         {
-            _systems.Add(_gamePlayFeature);
-            
             _systems.Initialize();
         }
 
         private void Update()
         {
             _systems.Execute();
+            _systems.Cleanup();
         }
 
         private void OnDestroy()

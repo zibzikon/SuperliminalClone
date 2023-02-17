@@ -11,6 +11,6 @@ namespace Code.Extensions
         }
 
         public static bool HaveCustomAttribute<T>(this object o) =>
-            Attribute.GetCustomAttribute(typeof(T), o.GetType()) is not null;
+            Attribute.GetCustomAttribute(o.GetType(), typeof(T)) is not null;
     }
 }
