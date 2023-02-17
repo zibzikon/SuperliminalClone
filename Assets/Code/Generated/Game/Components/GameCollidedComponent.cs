@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.GamePlay.Components.Interacting InteractingComponent = new Code.GamePlay.Components.Interacting();
+    static readonly Code.GamePlay.Components.Collided collidedComponent = new Code.GamePlay.Components.Collided();
 
-    public bool isInteracting {
-        get { return HasComponent(GameComponentsLookup.Interacted); }
+    public bool isCollided {
+        get { return HasComponent(GameComponentsLookup.Collided); }
         set {
-            if (value != isInteracting) {
-                var index = GameComponentsLookup.Interacted;
+            if (value != isCollided) {
+                var index = GameComponentsLookup.Collided;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : InteractingComponent;
+                            : collidedComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherInteracted;
+    static Entitas.IMatcher<GameEntity> _matcherCollided;
 
-    public static Entitas.IMatcher<GameEntity> Interacted {
+    public static Entitas.IMatcher<GameEntity> Collided {
         get {
-            if (_matcherInteracted == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Interacted);
+            if (_matcherCollided == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Collided);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherInteracted = matcher;
+                _matcherCollided = matcher;
             }
 
-            return _matcherInteracted;
+            return _matcherCollided;
         }
     }
 }

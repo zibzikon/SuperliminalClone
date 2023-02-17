@@ -6,12 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.GamePlay.Components;
-
 public partial class GameEntity {
 
-    static readonly PressurePlate pressurePlateComponent = new PressurePlate();
+    static readonly Code.GamePlay.Components.PressurePlate pressurePlateComponent = new Code.GamePlay.Components.PressurePlate();
 
     public bool isPressurePlate {
         get { return HasComponent(GameComponentsLookup.PressurePlate); }

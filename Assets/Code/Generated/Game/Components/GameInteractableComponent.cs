@@ -6,12 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.GamePlay.Components;
-
 public partial class GameEntity {
 
-    static readonly Interactable interactableComponent = new Interactable();
+    static readonly Code.GamePlay.Components.Interactable interactableComponent = new Code.GamePlay.Components.Interactable();
 
     public bool isInteractable {
         get { return HasComponent(GameComponentsLookup.Interactable); }

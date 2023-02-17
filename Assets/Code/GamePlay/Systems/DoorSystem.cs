@@ -17,7 +17,7 @@ namespace Code.GamePlay.Systems
         {
             foreach (var door in _doors)
             {
-                if (door.isInteractable && door.isInteracted)
+                if (door.isInteractable && door.isInteracting)
                 {
                     
                 }

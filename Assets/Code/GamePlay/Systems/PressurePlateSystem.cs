@@ -17,12 +17,18 @@ namespace Code.GamePlay.Systems
         {
             foreach (var pressurePlate in _pressurePlates)
             {
-                if (!pressurePlate.isInteractable || !pressurePlate.isInteracted ||
-                    !pressurePlate.hasConnectedEntityID) continue;
+                if (!pressurePlate.hasConnectedEntity) continue;
+              
+                var connectedEntity = pressurePlate.connectedEntity.Value;
                 
-                var connectedEntity = _gameContext.GetEntityWithId(pressurePlate.connectedEntityID.Value);
-                 
-                if (connectedEntity.isInteractable) connectedEntity.isInteracted = true;
+                if (!connectedEntity.isInteractable) continue;
+
+                if (!pressurePlate.isCollided && connectedEntity.isInteracting)
+                    connectedEntity.isInteracting = false;
+                  
+                else if (connectedEntity.isCollided && pressurePlate.hasCollisionID && !connectedEntity.isInteracting)
+                    connectedEntity.isInteracting = true;
+                
             }
         }
     }

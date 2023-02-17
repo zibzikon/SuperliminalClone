@@ -6,25 +6,26 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.GamePlay.Components;
-
 public static class GameComponentsLookup {
 
-    public const int ConnectedEntityID = 0;
-    public const int Door = 1;
-    public const int Id = 2;
-    public const int Interactable = 3;
-    public const int Interacted = 4;
-    public const int PressurePlate = 5;
-    public const int View = 6;
-    public const int ViewController = 7;
-    public const int InteractedListener = 8;
+    public const int Collided = 0;
+    public const int CollisionID = 1;
+    public const int ConnectedEntity = 2;
+    public const int Door = 3;
+    public const int Id = 4;
+    public const int Interactable = 5;
+    public const int Interacted = 6;
+    public const int PressurePlate = 7;
+    public const int View = 8;
+    public const int ViewController = 9;
+    public const int InteractedListener = 10;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
-        "ConnectedEntityID",
+        "Collided",
+        "CollisionID",
+        "ConnectedEntity",
         "Door",
         "Id",
         "Interactable",
@@ -36,14 +37,16 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(ConnectedEntityID),
-        typeof(Door),
-        typeof(Id),
-        typeof(Interactable),
-        typeof(Interacted),
-        typeof(PressurePlate),
-        typeof(ViewComponent),
-        typeof(ViewControllerComponent),
+        typeof(Code.GamePlay.Components.Collided),
+        typeof(Code.GamePlay.Components.CollisionID),
+        typeof(Code.GamePlay.Components.ConnectedEntity),
+        typeof(Code.GamePlay.Components.Door),
+        typeof(Code.GamePlay.Components.Id),
+        typeof(Code.GamePlay.Components.Interactable),
+        typeof(Code.GamePlay.Components.Interacting),
+        typeof(Code.GamePlay.Components.PressurePlate),
+        typeof(Code.GamePlay.Components.ViewComponent),
+        typeof(Code.GamePlay.Components.ViewControllerComponent),
         typeof(InteractedListenerComponent)
     };
 }

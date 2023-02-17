@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.GamePlay.Components;
-
 public partial class Contexts : Entitas.IContexts {
 
     public static Contexts sharedInstance {
@@ -61,27 +58,27 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
-    public const string ConnectedEntityID = "ConnectedEntityID";
+    public const string CollisionID = "CollisionID";
     public const string Id = "Id";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
-            ConnectedEntityID,
-            game.GetGroup(GameMatcher.ConnectedEntityID),
-            (e, c) => ((ConnectedEntityID)c).Value));
+            CollisionID,
+            game.GetGroup(GameMatcher.CollisionID),
+            (e, c) => ((Code.GamePlay.Components.CollisionID)c).Value));
 
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, int>(
             Id,
             game.GetGroup(GameMatcher.Id),
-            (e, c) => ((Id)c).Value));
+            (e, c) => ((Code.GamePlay.Components.Id)c).Value));
     }
 }
 
 public static class ContextsExtensions {
 
-    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithConnectedEntityID(this GameContext context, int Value) {
-        return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.ConnectedEntityID)).GetEntities(Value);
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithCollisionID(this GameContext context, int Value) {
+        return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.CollisionID)).GetEntities(Value);
     }
 
     public static GameEntity GetEntityWithId(this GameContext context, int Value) {

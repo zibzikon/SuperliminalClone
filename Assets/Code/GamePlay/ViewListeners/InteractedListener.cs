@@ -8,8 +8,6 @@ namespace Code.GamePlay.ViewListeners
     public class InteractedListener : MonoBehaviour, IInteractedListener, IEventListener
     {
         [SerializeField] private InteractableAnimator _animator;
-
-        private bool _interacted;
         
         public void Register(IEntity entity)
             => ((GameEntity)entity).AddInteractedListener(this);
@@ -19,14 +17,10 @@ namespace Code.GamePlay.ViewListeners
 
         public void OnInteracted(GameEntity entity)
         {
-            _interacted = !_interacted;
-            
-            if (_interacted)
+            if (entity.isInteracting)
                 _animator.PlayEnterInteractionAnimation();
             else
                 _animator.PlayExitInteractionAnimation();
-            
-            entity.isInteracted = false;
         }
     }
 }

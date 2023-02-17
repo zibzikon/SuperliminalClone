@@ -21,7 +21,7 @@ public sealed class InteractedEventSystem : Entitas.ReactiveSystem<GameEntity> {
     }
 
     protected override bool Filter(GameEntity entity) {
-        return entity.isInteracted && entity.hasInteractedListener;
+        return entity.isInteracting && entity.hasInteractedListener;
     }
 
     protected override void Execute(System.Collections.Generic.List<GameEntity> entities) {

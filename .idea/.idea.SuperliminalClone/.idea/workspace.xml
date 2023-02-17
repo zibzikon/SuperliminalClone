@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="Add: Debug directory for storing code for game debugging">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Debug/Code/GamePlay/InteractedBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/InteractedBehaviour.cs" beforeDir="false" />
+    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="Fix: Corrected namespaces">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/TriggerBehaviour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/TriggerBehaviour.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameCollidedComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameCollidedComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameCollisionIDComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameCollisionIDComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameConnectedEntityComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameConnectedEntityComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/ViewCollider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/ViewCollider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/Interfaces/IViewsCollidersRegister.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Services/Interfaces/IViewsCollidersRegister.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Extensions/CleanCodeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Extensions/CleanCodeExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/PressurePlateBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/PressurePlateBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/Components.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/DoorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/DoorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/PressurePlateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/PressurePlateSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/UnityViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/UnityViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractedListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractedListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Contexts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Contexts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/Systems/InteractedEventSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/Systems/InteractedEventSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameConnectedEntityIDComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameConnectedEntityIDComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameDoorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameDoorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameIdComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameIdComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractableComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractedComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractedComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GamePressurePlateComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GamePressurePlateComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewControllerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewControllerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/GameComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/GameComponentsLookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Cube (1).controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Cube (1).controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Pressing.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Pressing.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Pressing.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Pressing.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Releasing.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Releasing.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Releasing.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Releasing.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Door.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Pressure Plate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Pressure Plate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +74,7 @@
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Extensions/CleanCodeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Extensions/CleanCodeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/Behaviours/SelfInitializedView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/TriggerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/LevelController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/SystemsRegistration/InjectableFeature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/UnityViewController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,7 +104,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "RiderCSharpLiveTemplatesSettingsId",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -122,7 +163,7 @@
       <updated>1676568454295</updated>
       <workItem from="1676568456315" duration="800000" />
       <workItem from="1676573663038" duration="2418000" />
-      <workItem from="1676640757782" duration="11752000" />
+      <workItem from="1676640757782" duration="16988000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676573812761</created>
@@ -166,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676667943168</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix: Corrected namespaces">
+      <created>1676668338420</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676668338420</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,20 +243,21 @@
     <MESSAGE value="Created: FullGameFeature for systems registration" />
     <MESSAGE value="Fix: Changed GamePlayFeature installing to FullGameFeature in LevelFeaturesInstaller" />
     <MESSAGE value="Add: Debug directory for storing code for game debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: Debug directory for storing code for game debugging" />
+    <MESSAGE value="Fix: Corrected namespaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Corrected namespaces" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractedListener.cs</url>
-          <line>20</line>
+          <line>18</line>
           <properties documentPath="D:\Projects\Code\Unity\SuperliminalClone\Assets\Code\GamePlay\ViewListeners\InteractedListener.cs" initialLine="20" containingFunctionPresentation="method 'OnInteracted'">
             <startOffsets>
-              <option value="618" />
+              <option value="595" />
             </startOffsets>
             <endOffsets>
-              <option value="619" />
+              <option value="596" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
@@ -218,10 +267,10 @@
           <line>15</line>
           <properties documentPath="D:\Projects\Code\Unity\SuperliminalClone\Assets\Code\GamePlay\Behaviours\SelfInitializedView.cs" initialLine="15" containingFunctionPresentation="method 'Construct'">
             <startOffsets>
-              <option value="401" />
+              <option value="402" />
             </startOffsets>
             <endOffsets>
-              <option value="402" />
+              <option value="403" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
