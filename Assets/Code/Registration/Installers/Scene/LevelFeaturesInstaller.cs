@@ -13,7 +13,7 @@ namespace Code.Registration.Installers.Scene
             Container.BindInstance(contexts.game);
             Container.BindInstance(contexts.input);
 
-            Container.Bind<GamePlayFeature>().AsSingle();
+            Container.Bind<FullGameFeature>().AsSingle();
         }
     }
 }

@@ -5,16 +5,16 @@ using Zenject;
 
 namespace Code.Game.SystemsRegistration
 {
-    public class InjectableFeature : Feature
+    public abstract class InjectableFeature : Feature
     {
         private readonly DiContainer _diContainer;
 
-        public InjectableFeature(DiContainer diContainer)
+        protected InjectableFeature(DiContainer diContainer)
         {
             _diContainer = diContainer;
         }
 
-        public InjectableFeature AddInjected<T>() where T : ISystem
+        protected InjectableFeature AddInjected<T>() where T : ISystem
             => this.With(x => x.Add(_diContainer.Instantiate<T>()));
     }
 }
