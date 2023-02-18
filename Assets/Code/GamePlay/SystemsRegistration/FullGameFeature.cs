@@ -7,7 +7,7 @@ namespace Code.GamePlay.SystemsRegistration
         public FullGameFeature(DiContainer diContainer) : base(diContainer)
         {
             AddInjected<GamePlayFeature>();
-            AddInjected<GameEventsFeature>();
+            AddInjected<GameEventSystems>();
         }
     }
 }

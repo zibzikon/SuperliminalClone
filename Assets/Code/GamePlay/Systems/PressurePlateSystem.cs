@@ -1,34 +1,29 @@
+using System.Collections.Generic;
 using Entitas;
 
 namespace Code.GamePlay.Systems
 {
-    public class PressurePlateSystem : IExecuteSystem
+    public class PressurePlateSystem : ReactiveSystem<GameEntity>
     {
-        private readonly GameContext _gameContext;
-        private readonly IGroup<GameEntity> _pressurePlates;
-        
-        public PressurePlateSystem(GameContext gameContext)
-        {
-            _gameContext = gameContext;
-            _pressurePlates = gameContext.GetGroup(GameMatcher.PressurePlate);
-        }
-        
-        public void Execute()
-        {
-            foreach (var pressurePlate in _pressurePlates)
-            {
-                if (!pressurePlate.hasConnectedEntity) continue;
-              
-                var connectedEntity = pressurePlate.connectedEntity.Value;
-                
-                if (!connectedEntity.isInteractable) continue;
+        public PressurePlateSystem(GameContext gameContext) : base(gameContext) { }
 
-                if (!pressurePlate.isCollided && connectedEntity.isInteracting)
-                    connectedEntity.isInteracting = false;
-                  
-                else if (connectedEntity.isCollided && pressurePlate.hasCollisionID && !connectedEntity.isInteracting)
-                    connectedEntity.isInteracting = true;
+        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+            => context.CreateCollector(GameMatcher.Collided.AddedOrRemoved());
+
+        protected override bool Filter(GameEntity entity)
+            => entity.isPressurePlate && entity.hasConnectedEntity;
+        
+
+        protected override void Execute(List<GameEntity> entities)
+        {
+            foreach (var pressurePlate in entities)
+            {
+                UnityEngine.Debug.Log("Pressure plate system executed");
                 
+                var connectedEntity = pressurePlate.connectedEntity.Value;
+                if (!connectedEntity.hasInteraction) continue;
+
+                connectedEntity.ReplaceInteraction(pressurePlate.isCollided);
             }
         }
     }

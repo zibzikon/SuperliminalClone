@@ -5,19 +5,19 @@ using UnityEngine;
 
 namespace Code.GamePlay.ViewListeners
 {
-    public class InteractedListener : MonoBehaviour, IInteractedListener, IEventListener
+    public class InteractableListener : MonoBehaviour, IInteractionListener, IEventListener
     {
         [SerializeField] private InteractableAnimator _animator;
         
         public void Register(IEntity entity)
-            => ((GameEntity)entity).AddInteractedListener(this);
+            => ((GameEntity)entity).AddInteractionListener(this);
 
         public void Unregister(IEntity entity)
-            => ((GameEntity)entity).RemoveInteractedListener(this);
-
-        public void OnInteracted(GameEntity entity)
+            => ((GameEntity)entity).RemoveInteractionListener(this);
+        
+        public void OnInteraction(GameEntity entity, bool interacted)
         {
-            if (entity.isInteracting)
+            if (interacted)
                 _animator.PlayEnterInteractionAnimation();
             else
                 _animator.PlayExitInteractionAnimation();

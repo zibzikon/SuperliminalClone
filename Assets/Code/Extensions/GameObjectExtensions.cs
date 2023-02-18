@@ -6,14 +6,11 @@ namespace Code.Extensions
 {
     public static class GameObjectExtensions
     {
-        public static GameObject RegisterListeners(this GameObject gameObject, GameEntity entity)
-        {
-            var listeners = gameObject.GetComponents<IEventListener>();
-            
-            foreach (var listener in listeners)
-                listener.Register(entity);
-            
-            return gameObject;
-        }
+        public static bool MatchLayer(this Component component, LayerMask layerMask) =>
+            component.gameObject.MatchLayer(layerMask);
+        
+        public static bool MatchLayer (this GameObject gameObject, LayerMask layerMask) =>    
+            ((1 << gameObject.layer) & layerMask) != 0;
+
     }
 }

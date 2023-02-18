@@ -8,7 +8,6 @@ namespace Code.GamePlay.SystemsRegistration
         public GamePlayFeature(DiContainer diContainer) : base(diContainer)
         {
             AddInjected<PressurePlateSystem>();
-            AddInjected<DoorSystem>();
         }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using Code.Extensions;
 using Code.Infrastructure;
 using UnityEngine;
@@ -7,40 +6,38 @@ namespace Code.GamePlay.Behaviours
 {
     public class TriggerBehaviour : EntityBehaviour
     {
-        private void OnTriggerEnter(Collider other) => MarkCollided(other);
+        [SerializeField] private LayerMask _triggeringLayers;
+        
+        private void OnTriggerEnter(Collider other) => OnEnterCollision(other);
+        
+        private void OnTriggerExit(Collider other) => OnExitCollision(other);
 
-        private void OnTriggerStay(Collider other) => MarkCollided(other);
-
-        private void OnTriggerExit(Collider other) => UnmarkCollided(other);
-
-        private void MarkCollided(Collider collider)
+        private void OnEnterCollision(Collider collider)
         {
-            if (TryGetEntity(collider, out var entity)) return;
-
-            Entity.MarkCollided(entity);
-            entity.MarkCollided(Entity);
+            if (!TryGetEntity(collider, out var entity)) return;
+            
+            Entity.MarkCollidedBy(entity);
+            entity.MarkCollidedBy(Entity);
         }
 
-        private static bool TryGetEntity(Collider collider, out GameEntity entity)
+        private void OnExitCollision(Collider collider)
+        {
+            if (!TryGetEntity(collider, out var entity)) return;
+
+            Entity.UnmarkCollided();
+            entity.UnmarkCollided();
+        }
+
+        private bool TryGetEntity(Collider collider, out GameEntity entity)
         {
             entity = null;
             
-            ViewCollider viewCollider = null;
-            if ((viewCollider = collider.GetComponent<ViewCollider>()) == null) return false;
+            ViewCollider viewCollider;
+            if (!collider.MatchLayer(_triggeringLayers) ||
+                (viewCollider = collider.gameObject.GetComponent<ViewCollider>()) == null) return false;
 
             entity = viewCollider.ViewController.Entity;
-            return false;
-        }
-
-        private void UnmarkCollided(Collider other)
-        {
-            ViewCollider viewCollider = null;
-            if ((viewCollider = GetComponent<Collider>().GetComponent<ViewCollider>()) == null) return;
-            
-            var entity = viewCollider.ViewController.Entity;
-                
-            Entity.MarkCollided(entity);
-            entity.MarkCollided(Entity);
+            return true;
         }
         
     }

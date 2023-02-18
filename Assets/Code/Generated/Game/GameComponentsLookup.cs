@@ -13,14 +13,11 @@ public static class GameComponentsLookup {
     public const int ConnectedEntity = 2;
     public const int Door = 3;
     public const int Id = 4;
-    public const int Interactable = 5;
-    public const int Interacted = 6;
-    public const int PressurePlate = 7;
-    public const int View = 8;
-    public const int ViewController = 9;
-    public const int InteractedListener = 10;
+    public const int Interaction = 5;
+    public const int PressurePlate = 6;
+    public const int InteractionListener = 7;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 8;
 
     public static readonly string[] componentNames = {
         "Collided",
@@ -28,12 +25,9 @@ public static class GameComponentsLookup {
         "ConnectedEntity",
         "Door",
         "Id",
-        "Interactable",
-        "Interacted",
+        "Interaction",
         "PressurePlate",
-        "View",
-        "ViewController",
-        "InteractedListener"
+        "InteractionListener"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -42,11 +36,8 @@ public static class GameComponentsLookup {
         typeof(Code.GamePlay.Components.ConnectedEntity),
         typeof(Code.GamePlay.Components.Door),
         typeof(Code.GamePlay.Components.Id),
-        typeof(Code.GamePlay.Components.Interactable),
-        typeof(Code.GamePlay.Components.Interacting),
+        typeof(Code.GamePlay.Components.Interaction),
         typeof(Code.GamePlay.Components.PressurePlate),
-        typeof(Code.GamePlay.Components.ViewComponent),
-        typeof(Code.GamePlay.Components.ViewControllerComponent),
-        typeof(InteractedListenerComponent)
+        typeof(InteractionListenerComponent)
     };
 }

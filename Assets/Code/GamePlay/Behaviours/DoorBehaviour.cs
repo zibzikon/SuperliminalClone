@@ -8,7 +8,7 @@ namespace Code.GamePlay.Behaviours
         {
             Entity
                 .With(e => e.isDoor = true)
-                .With(e => e.isInteractable = true);
+                .With(e => e.AddInteraction(false));
         }
     }
 }

@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="Create: Pressure plate pressing systems">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Pressure Plate.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Animation/PressurePlate/Pressure Plate.controller.meta" afterDir="false" />
+    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="Update: Remove collision registration">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/UnityViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/UnityViewController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/Interfaces/IViewsCollidersRegister.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/Interfaces/IViewsCollidersRegister.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Extensions/CleanCodeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Extensions/CleanCodeExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Extensions/GameObjectExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Extensions/GameObjectExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/DoorBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/DoorBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/PressurePlateBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/PressurePlateBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/TriggerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/TriggerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/Components.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/DoorSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/DoorSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/PressurePlateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/PressurePlateSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/FullGameFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/FullGameFeature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GameEventsFeature.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GameEventsFeature.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GamePlayFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GamePlaySystems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GamePlayFeature.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GamePlaySystems.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractedListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractableListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractedListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractableListener.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/Components/InteractedListenerComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/Components/InteractedListenerComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/GameEventSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/GameEventSystems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/Interfaces/IInteractedListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/Interfaces/IInteractedListener.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/Systems/InteractedEventSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/Systems/InteractedEventSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractableComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractableComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractedComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractedComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractedListenerComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameInteractedListenerComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewControllerComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameViewControllerComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/GameComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/GameComponentsLookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/ViewCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/ViewCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Pressure Plate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Pressure Plate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +68,14 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfff7c0b1952412cb8118dddd204a124b800/57/39d654f4/IContext`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfff7c0b1952412cb8118dddd204a124b800/98/2209d211/TriggerOnEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfff7c0b1952412cb8118dddd204a124b800/d7/50fcbe45/GroupEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfff7c0b1952412cb8118dddd204a124b800/e5/51ef7e8f/TriggerOnEventMatcherExtension.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c008397304f84e50a33374c87ae489473800/89/5df32d56/ContextObserverBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e54b50a65ec84633acd0bfa0a9b5d9b416d600/d5/d83824f6/RenderChain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Extensions/CleanCodeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Extensions/CleanCodeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Extensions/CleanCodeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/Behaviours/SelfInitializedView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/TriggerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/LevelController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/SystemsRegistration/InjectableFeature.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/GamePlay/UnityViewController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Generated/Game/GameComponentsLookup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Registration/Installers/Scene/LevelFeaturesInstaller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Code/Registration/Installers/Scene/ViewsInstaller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Resources/Animation/Door/Door.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Code/Unity/SuperliminalClone/Assets/Scenes/Levels/Level_1.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -61,25 +89,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Опініон\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Опініон\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Опініон\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Опініон\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Опініон\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Опініон\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.2.6f1\Editor\Unity.exe" />
@@ -107,10 +135,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5652">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="5652" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -128,7 +156,12 @@
       <updated>1676568454295</updated>
       <workItem from="1676568456315" duration="800000" />
       <workItem from="1676573663038" duration="2418000" />
-      <workItem from="1676640757782" duration="17684000" />
+      <workItem from="1676640757782" duration="18242000" />
+      <workItem from="1676717426622" duration="2551000" />
+      <workItem from="1676720043611" duration="1798000" />
+      <workItem from="1676731841181" duration="2453000" />
+      <workItem from="1676738820809" duration="412000" />
+      <workItem from="1676739413051" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676573812761</created>
@@ -186,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676673381220</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update: Remove collision registration">
+      <created>1676674010707</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676674010707</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,38 +257,7 @@
     <MESSAGE value="Add: Debug directory for storing code for game debugging" />
     <MESSAGE value="Fix: Corrected namespaces" />
     <MESSAGE value="Create: Pressure plate pressing systems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create: Pressure plate pressing systems" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Code/GamePlay/ViewListeners/InteractedListener.cs</url>
-          <line>18</line>
-          <properties documentPath="D:\Projects\Code\Unity\SuperliminalClone\Assets\Code\GamePlay\ViewListeners\InteractedListener.cs" initialLine="20" containingFunctionPresentation="method 'OnInteracted'">
-            <startOffsets>
-              <option value="595" />
-            </startOffsets>
-            <endOffsets>
-              <option value="596" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/SelfInitializedView.cs</url>
-          <line>15</line>
-          <properties documentPath="D:\Projects\Code\Unity\SuperliminalClone\Assets\Code\GamePlay\Behaviours\SelfInitializedView.cs" initialLine="15" containingFunctionPresentation="method 'Construct'">
-            <startOffsets>
-              <option value="402" />
-            </startOffsets>
-            <endOffsets>
-              <option value="403" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Update: Remove collision registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: Remove collision registration" />
   </component>
 </project>

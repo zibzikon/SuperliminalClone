@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 209152637166556775}
   - component: {fileID: 9037770998165536845}
   - component: {fileID: 601300449150080464}
+  - component: {fileID: 7118460567347001273}
+  - component: {fileID: 1805005710670501888}
+  - component: {fileID: 7336411508169040689}
   m_Layer: 0
   m_Name: Pressure Plate
   m_TagString: Untagged
@@ -76,6 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7634ca3aa9b4600bf2160d476da7899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggeringLayers:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &209152637166556775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +129,66 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7118460567347001273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3247973397726484680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2db422800840dc833c814c444d59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1805005710670501888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3247973397726484680}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.24, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7336411508169040689
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3247973397726484680}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3776465662184726906
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +200,8 @@ GameObject:
   - component: {fileID: 4426544091660785113}
   - component: {fileID: 8579007894332890451}
   - component: {fileID: 4479481173639544613}
-  - component: {fileID: 7299128334728228403}
+  - component: {fileID: 7149009636889624136}
+  - component: {fileID: 2172771955510622570}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -207,7 +274,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7299128334728228403
+--- !u!65 &7149009636889624136
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,10 +291,22 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2172771955510622570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776465662184726906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130a77ea879d4488a9618c4ffff7d0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6942658125830929046
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +409,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

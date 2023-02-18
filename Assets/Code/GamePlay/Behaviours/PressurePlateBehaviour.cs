@@ -10,8 +10,7 @@ namespace Code.GamePlay.Behaviours
         {
             Entity
                 .With(e => e.isPressurePlate = true)
-                .With(e => e.isInteractable = true);
-            //.With(e => e.AddConnectedEntityID(_connectedInteractable.Entity.id.Value));
+                .With(e => e.AddConnectedEntity(_connectedInteractable.Entity));
         }
     }
 }
