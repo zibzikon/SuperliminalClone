@@ -1,6 +1,5 @@
 using Code.GamePlay.Behaviours;
 using Code.GamePlay.Interfaces;
-using Entitas;
 using UnityEngine;
 
 namespace Code.GamePlay.ViewListeners
@@ -9,11 +8,11 @@ namespace Code.GamePlay.ViewListeners
     {
         [SerializeField] private InteractableAnimator _animator;
         
-        public void Register(IEntity entity)
-            => ((GameEntity)entity).AddInteractionListener(this);
+        public void Register(GameEntity entity)
+            => entity.AddInteractionListener(this);
 
-        public void Unregister(IEntity entity)
-            => ((GameEntity)entity).RemoveInteractionListener(this);
+        public void Unregister(GameEntity entity)
+            =>entity.RemoveInteractionListener(this);
         
         public void OnInteraction(GameEntity entity, bool interacted)
         {

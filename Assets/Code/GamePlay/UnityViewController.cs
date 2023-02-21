@@ -27,11 +27,19 @@ namespace Code.GamePlay
         private void Start()
         {
             Entity.AddId(_identifierGenerator.GetNext());
+            
+            RegisterViewComponents();
         }
 
         public void Destroy()
         {
             Destroy(gameObject);
+        }
+
+        private void RegisterViewComponents()
+        {
+            foreach (var register in GetComponents<IViewComponentRegister>())
+                register.Register(Entity);
         }
     }
 }

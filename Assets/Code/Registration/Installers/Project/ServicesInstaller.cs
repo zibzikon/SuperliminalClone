@@ -15,6 +15,7 @@ using Code.StateMachine;
 using Code.StateMachine.Interfaces;
 using Code.Visualisation;
 using Code.Visualisation.Interfaces;
+using UnityEngine;
 using Zenject;
 
 namespace Code.Registration.Installers.Project
@@ -32,6 +33,17 @@ namespace Code.Registration.Installers.Project
             Container.Bind<IViewService>().To<UnityViewService>().AsSingle();
             Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
             Container.Bind<ILevelLoader>().To<LevelLoaderWithLoadingVisualization>().AsSingle();
+            Container.Bind<IUserInput>().To<UserInput>().AsSingle();
+            
+            Container.Bind<IControlActions>().To<ControlActions>().AsSingle().
+                WithArguments(new ControlAction[]
+                {
+                    new(KeyCode.W, ControlActionType.PlayerMoveFowards),
+                    new(KeyCode.S, ControlActionType.PlayerMoveBackwards),
+                    new(KeyCode.A, ControlActionType.PlayerMoveLeft),
+                    new(KeyCode.D, ControlActionType.PlayerMoveRight),
+                });
+            
             Container.Bind<IIdentifierGenerator>().To<IdentifierGenerator>().AsSingle();
             
             Container.Bind<ISceneLoadingVisualizer>().To<SceneLoadingVisualizer>().AsSingle();

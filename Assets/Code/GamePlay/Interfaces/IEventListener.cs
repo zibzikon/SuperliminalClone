@@ -4,7 +4,7 @@ namespace Code.GamePlay.Interfaces
 {
     public interface IEventListener
     {
-        void Register(IEntity entity);
-        void Unregister(IEntity entity);
+        void Register(GameEntity entity);
+        void Unregister(GameEntity entity);
     }
 }
