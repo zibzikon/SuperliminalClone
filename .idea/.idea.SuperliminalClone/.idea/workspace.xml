@@ -1,61 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Debug/Code/SuperliminalMechanicTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Debug/Code/SuperliminalMechanicTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Debug/Code/SweepTestExample.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Debug/Code/SweepTestExample.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Debug/Code/VectorProjectionTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Debug/Code/VectorProjectionTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Extensions/VectorExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Extensions/VectorExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/GroundedBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/GroundedBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/PlayerGravitySystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/PlayerGravitySystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewComponentsRegistration/CharacterControllerRegister.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/ViewComponentsRegistration/CharacterControllerRegister.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/Components/GroundedListenerComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/Interfaces/IGroundedListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/Interfaces/IGroundedListener.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/Systems/GroundedEventSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/Systems/GroundedEventSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameCharacterControllerComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameCharacterControllerComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameGroundedListenerComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameGroundedListenerComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputPlayerJumpComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputPlayerJumpComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputPlayerMotionComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputPlayerMotionComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Components.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Tests.unity.meta" afterDir="false" />
+    <list default="true" id="6a0311d2-0415-4f62-a89f-70a971c64ac9" name="Changes" comment="Created: Player character jumping system">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/PlayerComponents.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/PlayerComponents.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperliminalClone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Extensions/NumberExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Extensions/NumberExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/FPSCharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/FPSCharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Behaviours/PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/GamePlay.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/GamePlay.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/GamePlay/InteractedBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/GamePlay/InteractedBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/SuperliminalMechanicTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/SuperliminalMechanicTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/SuperliminalMechanicTest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/SuperliminalMechanicTest.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/SweepTestExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/SweepTestExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/SweepTestExample.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/SweepTestExample.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/VectorProjectionTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/VectorProjectionTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Debug/Code/VectorProjectionTest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Testing/Code/VectorProjectionTest.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Components/Components.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/EmitPlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/EmitPlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/PlayerMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/PlayerMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/PlayerRotateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/Systems/Player/PlayerRotateSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GamePlay/PlayerSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GamePlay/SystemsRegistration/GamePlay/PlayerSystems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Events/GameEventSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/GameEventSystems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameJumpCurveComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/Components/GameJumpCurveComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Events/Components/GroundedListenerComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Game/GameComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Game/GameComponentsLookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputJumpComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputJumpComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputPlayerMoveComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Input/Components/InputPlayerMoveComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Generated/Input/InputComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Generated/Input/InputComponentsLookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/ViewCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Components/ViewCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/ViewCollider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Components/ViewCollider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Registration/Installers/Project/ServicesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Registration/Installers/Project/ServicesInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Services/ControlActionType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Services/ControlActionType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +157,7 @@
       <workItem from="1677075026586" duration="8656000" />
       <workItem from="1677138729848" duration="7820000" />
       <workItem from="1677168849483" duration="172000" />
+      <workItem from="1677224022896" duration="1543000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676573812761</created>
@@ -275,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676972933270</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created: Player character jumping system">
+      <created>1677224262685</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677224262686</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +277,8 @@
     <MESSAGE value="Update: Remove collision registration" />
     <MESSAGE value="Update: Finalized pressure plate with door interaction system" />
     <MESSAGE value="Created: Player movement and rotation gameplay systems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created: Player movement and rotation gameplay systems" />
+    <MESSAGE value="Created: Player character jumping system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created: Player character jumping system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
