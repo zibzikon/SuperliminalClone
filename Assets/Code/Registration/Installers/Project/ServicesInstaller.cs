@@ -38,10 +38,11 @@ namespace Code.Registration.Installers.Project
             Container.Bind<IControlActions>().To<ControlActions>().AsSingle().
                 WithArguments(new ControlAction[]
                 {
-                    new(KeyCode.W, ControlActionType.PlayerMoveFowards),
+                    new(KeyCode.W, ControlActionType.PlayerMoveForwards),
                     new(KeyCode.S, ControlActionType.PlayerMoveBackwards),
                     new(KeyCode.A, ControlActionType.PlayerMoveLeft),
                     new(KeyCode.D, ControlActionType.PlayerMoveRight),
+                    new(KeyCode.Space, ControlActionType.PlayerJump),
                 });
             
             Container.Bind<IIdentifierGenerator>().To<IdentifierGenerator>().AsSingle();

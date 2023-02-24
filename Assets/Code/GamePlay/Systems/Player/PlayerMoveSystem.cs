@@ -1,3 +1,4 @@
+using Code.Extensions;
 using Entitas;
 using UnityEngine;
 using static GameMatcher;
@@ -13,9 +14,9 @@ namespace Code.GamePlay.Systems.Player
         public PlayerMoveSystem(GameContext gameContext, InputContext inputContext)
         {
             _players = gameContext.GetGroup(AllOf(
-                GameMatcher.Player, Position, GameMatcher.Transform, MoveSpeed));
+                GameMatcher.Player, Position, GameMatcher.Transform, MoveSpeed, GameMatcher.CharacterController));
             
-            _keyboard = inputContext.GetGroup(AllOf(Keyboard, PlayerMove));
+            _keyboard = inputContext.GetGroup(AllOf(Keyboard, PlayerMotion));
         }
         
         public void Execute()
@@ -23,21 +24,27 @@ namespace Code.GamePlay.Systems.Player
             foreach (var player in _players)
             foreach (var keyboard in _keyboard)
             {
-                var moveValue = keyboard.playerMove.Value;
+                var moveValue = keyboard.playerMotion.Value;
                 
-                var xSpeed = player.moveSpeed.Value * moveValue.x;
-                var ySpeed = player.moveSpeed.Value * moveValue.y;
+                var motion = CalculatePlayerMoveDirection(player, moveValue);
 
-                var right = player.transform.Value.right;
-                var forward = player.transform.Value.forward;
-
-                var moveDirection = right * xSpeed + forward * ySpeed;
+                var playerController = player.characterController.Value;
+                playerController.Move(motion * Time.deltaTime);
                 
-                var nextPosition = player.position.Value + moveDirection * Time.deltaTime;
-                
-                if (nextPosition != player.position.Value)
-                    player.ReplacePosition(nextPosition);
+                player.ReplaceMoveDirection(motion);
+                //player.ReplacePosition(playerController.transform.position);
             }
+        }
+        
+        private Vector3 CalculatePlayerMoveDirection(GameEntity player, Vector2 moveValue)
+        {
+            var xSpeed = player.moveSpeed.Value * moveValue.x;
+            var ySpeed = player.moveSpeed.Value * moveValue.y;
+
+            var right = player.transform.Value.right;
+            var forward = player.transform.Value.forward;
+
+            return (right * xSpeed + forward * ySpeed).WithNewY(player.moveDirection.Value.y);
         }
     }
 }

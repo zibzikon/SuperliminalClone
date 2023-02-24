@@ -13,7 +13,7 @@ namespace Code
         public Camera playerCamera;
         public float lookSpeed = 2.0f;
         public float lookXLimit = 45.0f;
-
+        
         CharacterController characterController;
         Vector3 moveDirection = Vector3.zero;
         float rotationX = 0;
@@ -61,7 +61,7 @@ namespace Code
 
             // Move the controller
             characterController.Move(moveDirection * Time.deltaTime);
-
+             
             // Player and Camera rotation
             if (canMove)
             {

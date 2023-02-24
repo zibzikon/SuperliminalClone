@@ -8,6 +8,7 @@ namespace Code.GamePlay.SystemsRegistration
         public PlayerSystems(DiContainer diContainer) : base(diContainer)
         {
             AddInjected<EmitPlayerInput>();
+            AddInjected<PlayerGravitySystem>();
             AddInjected<PlayerMoveSystem>();
             AddInjected<PlayerRotateSystem>();
             AddInjected<PlayerCameraRotateSystem>();

@@ -8,40 +8,47 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Collided = 0;
-    public const int CollisionID = 1;
-    public const int ConnectedEntity = 2;
-    public const int Door = 3;
-    public const int Grounded = 4;
-    public const int Id = 5;
-    public const int Interaction = 6;
-    public const int JumpCurve = 7;
-    public const int LookSpeed = 8;
-    public const int LookXLimit = 9;
-    public const int MoveSpeed = 10;
-    public const int Player = 11;
-    public const int PlayerCamera = 12;
-    public const int Position = 13;
-    public const int PressurePlate = 14;
-    public const int Rotation = 15;
-    public const int Transform = 16;
-    public const int InteractionListener = 17;
-    public const int PositionListener = 18;
-    public const int RotationListener = 19;
+    public const int CharacterController = 0;
+    public const int Collided = 1;
+    public const int CollisionID = 2;
+    public const int ConnectedEntity = 3;
+    public const int Door = 4;
+    public const int GravityForce = 5;
+    public const int Grounded = 6;
+    public const int Id = 7;
+    public const int Interaction = 8;
+    public const int JumpForce = 9;
+    public const int LookSpeed = 10;
+    public const int LookXLimit = 11;
+    public const int MoveDirection = 12;
+    public const int MoveSpeed = 13;
+    public const int Player = 14;
+    public const int PlayerCamera = 15;
+    public const int Position = 16;
+    public const int PressurePlate = 17;
+    public const int Rotation = 18;
+    public const int Transform = 19;
+    public const int GroundedListener = 20;
+    public const int InteractionListener = 21;
+    public const int PositionListener = 22;
+    public const int RotationListener = 23;
 
-    public const int TotalComponents = 20;
+    public const int TotalComponents = 24;
 
     public static readonly string[] componentNames = {
+        "CharacterController",
         "Collided",
         "CollisionID",
         "ConnectedEntity",
         "Door",
+        "GravityForce",
         "Grounded",
         "Id",
         "Interaction",
-        "JumpCurve",
+        "JumpForce",
         "LookSpeed",
         "LookXLimit",
+        "MoveDirection",
         "MoveSpeed",
         "Player",
         "PlayerCamera",
@@ -49,22 +56,26 @@ public static class GameComponentsLookup {
         "PressurePlate",
         "Rotation",
         "Transform",
+        "GroundedListener",
         "InteractionListener",
         "PositionListener",
         "RotationListener"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(Code.GamePlay.Components.CharacterController),
         typeof(Code.GamePlay.Components.Collided),
         typeof(Code.GamePlay.Components.CollisionID),
         typeof(Code.GamePlay.Components.ConnectedEntity),
         typeof(Code.GamePlay.Components.Door),
+        typeof(Code.GamePlay.Components.GravityForce),
         typeof(Code.GamePlay.Components.Grounded),
         typeof(Code.GamePlay.Components.Id),
         typeof(Code.GamePlay.Components.Interaction),
-        typeof(Code.GamePlay.Components.JumpCurve),
+        typeof(Code.GamePlay.Components.JumpForce),
         typeof(Code.GamePlay.Components.LookSpeed),
         typeof(Code.GamePlay.Components.LookXLimit),
+        typeof(Code.GamePlay.Components.MoveDirection),
         typeof(Code.GamePlay.Components.MoveSpeed),
         typeof(Code.GamePlay.Components.Player),
         typeof(Code.GamePlay.Components.PlayerCamera),
@@ -72,6 +83,7 @@ public static class GameComponentsLookup {
         typeof(Code.GamePlay.Components.PressurePlate),
         typeof(Code.GamePlay.Components.Rotation),
         typeof(Code.GamePlay.Components.Transform),
+        typeof(GroundedListenerComponent),
         typeof(InteractionListenerComponent),
         typeof(PositionListenerComponent),
         typeof(RotationListenerComponent)

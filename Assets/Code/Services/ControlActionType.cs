@@ -2,8 +2,9 @@ public enum ControlActionType
 {
     None,
     
-    PlayerMoveFowards,
+    PlayerMoveForwards,
     PlayerMoveBackwards,
     PlayerMoveLeft,
     PlayerMoveRight,
+    PlayerJump
 }

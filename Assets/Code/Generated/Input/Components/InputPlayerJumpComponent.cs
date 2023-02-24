@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    static readonly Code.GamePlay.Components.Jump jumpComponent = new Code.GamePlay.Components.Jump();
+    static readonly Code.GamePlay.Components.PlayerJump playerJumpComponent = new Code.GamePlay.Components.PlayerJump();
 
-    public bool isJump {
-        get { return HasComponent(InputComponentsLookup.Jump); }
+    public bool isPlayerJump {
+        get { return HasComponent(InputComponentsLookup.PlayerJump); }
         set {
-            if (value != isJump) {
-                var index = InputComponentsLookup.Jump;
+            if (value != isPlayerJump) {
+                var index = InputComponentsLookup.PlayerJump;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : jumpComponent;
+                            : playerJumpComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class InputEntity {
 //------------------------------------------------------------------------------
 public sealed partial class InputMatcher {
 
-    static Entitas.IMatcher<InputEntity> _matcherJump;
+    static Entitas.IMatcher<InputEntity> _matcherPlayerJump;
 
-    public static Entitas.IMatcher<InputEntity> Jump {
+    public static Entitas.IMatcher<InputEntity> PlayerJump {
         get {
-            if (_matcherJump == null) {
-                var matcher = (Entitas.Matcher<InputEntity>)Entitas.Matcher<InputEntity>.AllOf(InputComponentsLookup.Jump);
+            if (_matcherPlayerJump == null) {
+                var matcher = (Entitas.Matcher<InputEntity>)Entitas.Matcher<InputEntity>.AllOf(InputComponentsLookup.PlayerJump);
                 matcher.componentNames = InputComponentsLookup.componentNames;
-                _matcherJump = matcher;
+                _matcherPlayerJump = matcher;
             }
 
-            return _matcherJump;
+            return _matcherPlayerJump;
         }
     }
 }

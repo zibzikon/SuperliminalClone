@@ -28,12 +28,13 @@ namespace Code.GamePlay.Systems.Player
                 var playerHorizontal = 0f;
                 var playerVertical = 0f;
                 
-                if (IsAction(PlayerMoveFowards)) playerVertical += 1;
+                if (IsAction(PlayerMoveForwards)) playerVertical += 1;
                 if (IsAction(PlayerMoveBackwards)) playerVertical -= 1;
                 if (IsAction(PlayerMoveLeft)) playerHorizontal -= 1;
                 if (IsAction(PlayerMoveRight)) playerHorizontal += 1;
                 
-                keyboard.ReplacePlayerMove(new Vector2(playerHorizontal, playerVertical));
+                keyboard.ReplacePlayerMotion(new Vector2(playerHorizontal, playerVertical));
+                keyboard.isPlayerJump = IsAction(PlayerJump);
             }
         }
         
