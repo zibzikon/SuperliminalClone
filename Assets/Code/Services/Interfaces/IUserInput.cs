@@ -7,5 +7,8 @@ namespace Code.Services.Interfaces
         public Vector2 GetMouseAxis();
 
         public bool IsKeyPressed(KeyCode keyCode);
+        public bool IsLeftMousePressed();
+        public bool IsRightMousePressed();
+        
     }
 }

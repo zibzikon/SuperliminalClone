@@ -1,4 +1,7 @@
-public interface IGameDataLoader
+namespace Code.Services.Interfaces
 {
+    public interface IGameDataLoader
+    {
     
+    }
 }

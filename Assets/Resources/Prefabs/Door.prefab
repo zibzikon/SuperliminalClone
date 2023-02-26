@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130a77ea879d4488a9618c4ffff7d0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ViewController>k__BackingField: {fileID: 2420274908898109457}
 --- !u!1 &2420274908106643883
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130a77ea879d4488a9618c4ffff7d0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ViewController>k__BackingField: {fileID: 2420274908898109457}
 --- !u!1 &2420274908898109458
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,12 +856,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2420274908898109462}
+  - component: {fileID: 2420274908898109463}
   - component: {fileID: 2420274908898109457}
   - component: {fileID: 2420274908898109456}
-  - component: {fileID: 2420274908898109459}
+  - component: {fileID: 3818625652583396236}
+  - component: {fileID: 7999646655766367947}
   - component: {fileID: 2420274908898109461}
-  - component: {fileID: 2420274908898109460}
-  - component: {fileID: 2420274908898109463}
+  - component: {fileID: 2615298544592183672}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -881,8 +884,28 @@ Transform:
   m_Children:
   - {fileID: 2420274908336220093}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2420274908898109463
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420274908898109458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2a5a04af4394584897676e04f85fc42, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &2420274908898109457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48067a20606f472eaa749cd4f87895a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2420274908898109459
+--- !u!114 &3818625652583396236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -916,23 +939,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2420274908898109458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d2db422800840dc833c814c444d59a7, type: 3}
+  m_Script: {fileID: 11500000, guid: aaa55d7040214aee967c11a7ec783088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2420274908898109461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2420274908898109458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6e80e9a9fd4c9199cabc86852a152a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 2420274908898109460}
---- !u!114 &2420274908898109460
+--- !u!114 &7999646655766367947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -946,23 +956,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 2420274908898109463}
   _isInteractingKeyName: isOpened
---- !u!95 &2420274908898109463
-Animator:
-  serializedVersion: 5
+--- !u!114 &2420274908898109461
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2420274908898109458}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a2a5a04af4394584897676e04f85fc42, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6e80e9a9fd4c9199cabc86852a152a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7999646655766367947}
+--- !u!114 &2615298544592183672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420274908898109458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2db422800840dc833c814c444d59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

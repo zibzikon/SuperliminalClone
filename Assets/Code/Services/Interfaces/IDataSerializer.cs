@@ -1,5 +1,8 @@
-public interface IDataSerializer
+namespace Code.Services.Interfaces
 {
-    string Serialize<T>(T obj);
-    T Deserialize<T>(string token);
+    public interface IDataSerializer
+    {
+        string Serialize<T>(T obj);
+        T Deserialize<T>(string token);
+    }
 }

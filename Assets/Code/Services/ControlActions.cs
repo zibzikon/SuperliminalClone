@@ -1,21 +1,25 @@
 using System.Collections.Generic;
 using System.Linq;
+using Code.Services.Interfaces;
 using UnityEngine;
 
-public class ControlActions : IControlActions
+namespace Code.Services
 {
-    private Dictionary<KeyCode, ControlActionType> _actions;
-    private Dictionary<ControlActionType, KeyCode> _keyCodes;
-
-    public ControlActions(ControlAction[] actions)
+    public class ControlActions : IControlActions
     {
-        _actions = actions.ToDictionary(x => x.KeyCode, x => x.ActionType);
-        _keyCodes = actions.ToDictionary(x => x.ActionType, x => x.KeyCode);
+        private Dictionary<KeyCode, ControlActionType> _actions;
+        private Dictionary<ControlActionType, KeyCode> _keyCodes;
+
+        public ControlActions(ControlAction[] actions)
+        {
+            _actions = actions.ToDictionary(x => x.KeyCode, x => x.ActionType);
+            _keyCodes = actions.ToDictionary(x => x.ActionType, x => x.KeyCode);
+        }
+
+        public ControlActionType GetAction(KeyCode keyCode)
+            => _actions[keyCode];
+
+        public KeyCode GetKeyCode(ControlActionType actionType)
+            => _keyCodes[actionType];
     }
-
-    public ControlActionType GetAction(KeyCode keyCode)
-        => _actions[keyCode];
-
-    public KeyCode GetKeyCode(ControlActionType actionType)
-        => _keyCodes[actionType];
 }

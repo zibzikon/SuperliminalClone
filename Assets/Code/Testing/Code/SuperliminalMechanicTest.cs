@@ -1,29 +1,56 @@
 using System;
-using System.Linq;
 using Code.Extensions;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Code.Debug.Code
+namespace Code.Testing.Code
 {
     public class SuperliminalMechanicTest : MonoBehaviour
     {
-        [SerializeField] private Transform _target;
         [SerializeField] private float _calculationsHardness;
         [SerializeField] private LayerMask _notTargetLayerMask;
+        [SerializeField] private LayerMask _targetLayerMask;
 
-        private float _originalScale;
+        private Transform _target;
+        
         private float _originalDistance;
-
-        private void Start()
-        {
-            _originalDistance = Vector3.Distance(transform.position, _target.transform.position);
-            _originalScale = _target.transform.localScale.x;
-        }
-
+        private float _originalScale;
+        
         private void Update()
         {
-            UpdateTargetTransform();
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (_target is null)
+                    SelectObject();
+                else
+                    ReleaseTarget();
+            }
+            
+            if (_target != null)
+                UpdateTargetTransform();
+            
+        }
+
+        private void SelectObject()
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out var hit,1000, _targetLayerMask))
+            {
+                _target = hit.collider.gameObject.transform;
+                _originalDistance = Vector3.Distance(transform.position, _target.transform.position);
+                _originalScale = _target.localScale.x;
+                _target.GetComponent<Collider>().enabled = false;
+                _target.GetComponent<Rigidbody>().isKinematic = true;
+            }
+        }
+
+        private void ReleaseTarget()
+        {
+            _originalScale = 0;
+            _originalDistance = 0;
+            _target.GetComponent<Collider>().enabled = true;
+            _target.GetComponent<Rigidbody>().isKinematic = false;
+            _target = null;
+
         }
 
         [Button, HideInEditorMode]
@@ -42,7 +69,7 @@ namespace Code.Debug.Code
 
             var ratio = currentDistance / _originalDistance;
 
-            return ratio.AsVector3();
+            return ratio.AsVector3() * _originalScale;
         }
 
 

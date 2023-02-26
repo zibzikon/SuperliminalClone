@@ -1,9 +1,8 @@
-using System;
 using Code.GamePlay;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Code.Infrastructure
+namespace Code.Infrastructure.Components
 {
     [RequireComponent(typeof(Collider))]
     public class ViewCollider : MonoBehaviour 

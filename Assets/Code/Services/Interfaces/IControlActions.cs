@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public interface IControlActions
+namespace Code.Services.Interfaces
 {
-    ControlActionType GetAction(KeyCode keyCode);
-    KeyCode GetKeyCode(ControlActionType actionType);
+    public interface IControlActions
+    {
+        ControlActionType GetAction(KeyCode keyCode);
+        KeyCode GetKeyCode(ControlActionType actionType);
+    }
 }

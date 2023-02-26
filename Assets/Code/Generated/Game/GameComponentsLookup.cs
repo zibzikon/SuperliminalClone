@@ -8,84 +8,171 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int CharacterController = 0;
+    public const int Camera = 0;
     public const int Collided = 1;
-    public const int CollisionID = 2;
-    public const int ConnectedEntity = 3;
-    public const int Door = 4;
-    public const int GravityForce = 5;
-    public const int Grounded = 6;
-    public const int Id = 7;
-    public const int Interaction = 8;
-    public const int JumpForce = 9;
-    public const int LookSpeed = 10;
-    public const int LookXLimit = 11;
-    public const int MoveDirection = 12;
-    public const int MoveSpeed = 13;
-    public const int Player = 14;
-    public const int PlayerCamera = 15;
-    public const int Position = 16;
-    public const int PressurePlate = 17;
-    public const int Rotation = 18;
-    public const int Transform = 19;
-    public const int GroundedListener = 20;
-    public const int InteractionListener = 21;
-    public const int PositionListener = 22;
-    public const int RotationListener = 23;
+    public const int CollidedEntity = 2;
+    public const int CollidersDisabled = 3;
+    public const int Collisionable = 4;
+    public const int ConnectedCamera = 5;
+    public const int ConnectedEntity = 6;
+    public const int Door = 7;
+    public const int ForcedPerspectiveObject = 8;
+    public const int Grounded = 9;
+    public const int Id = 10;
+    public const int InInteraction = 11;
+    public const int Interactable = 12;
+    public const int Interacted = 13;
+    public const int Interactor = 14;
+    public const int JumpForce = 15;
+    public const int Kinematic = 16;
+    public const int LastUpdatedPosition = 17;
+    public const int LookSpeed = 18;
+    public const int LookXLimit = 19;
+    public const int MaxInteractionDistance = 20;
+    public const int MoveSpeed = 21;
+    public const int ObjectBounds = 22;
+    public const int OriginalScale = 23;
+    public const int PhysicalObject = 24;
+    public const int Player = 25;
+    public const int Position = 26;
+    public const int PressurePlate = 27;
+    public const int RigidbodyForce = 28;
+    public const int RigidbodyVelocity = 29;
+    public const int Rotation = 30;
+    public const int Scale = 31;
+    public const int Selectable = 32;
+    public const int Selected = 33;
+    public const int SelectedObject = 34;
+    public const int SelectionDistance = 35;
+    public const int Selector = 36;
+    public const int Transform = 37;
+    public const int CollidedListener = 38;
+    public const int CollidersDisabledListener = 39;
+    public const int CollidersDisabledRemovedListener = 40;
+    public const int GroundedListener = 41;
+    public const int InteractedListener = 42;
+    public const int InteractedRemovedListener = 43;
+    public const int KinematicListener = 44;
+    public const int KinematicRemovedListener = 45;
+    public const int PositionListener = 46;
+    public const int RigidbodyForceListener = 47;
+    public const int RigidbodyVelocityListener = 48;
+    public const int RotationListener = 49;
+    public const int ScaleListener = 50;
+    public const int SelectedListener = 51;
+    public const int SelectedRemovedListener = 52;
 
-    public const int TotalComponents = 24;
+    public const int TotalComponents = 53;
 
     public static readonly string[] componentNames = {
-        "CharacterController",
+        "Camera",
         "Collided",
-        "CollisionID",
+        "CollidedEntity",
+        "CollidersDisabled",
+        "Collisionable",
+        "ConnectedCamera",
         "ConnectedEntity",
         "Door",
-        "GravityForce",
+        "ForcedPerspectiveObject",
         "Grounded",
         "Id",
-        "Interaction",
+        "InInteraction",
+        "Interactable",
+        "Interacted",
+        "Interactor",
         "JumpForce",
+        "Kinematic",
+        "LastUpdatedPosition",
         "LookSpeed",
         "LookXLimit",
-        "MoveDirection",
+        "MaxInteractionDistance",
         "MoveSpeed",
+        "ObjectBounds",
+        "OriginalScale",
+        "PhysicalObject",
         "Player",
-        "PlayerCamera",
         "Position",
         "PressurePlate",
+        "RigidbodyForce",
+        "RigidbodyVelocity",
         "Rotation",
+        "Scale",
+        "Selectable",
+        "Selected",
+        "SelectedObject",
+        "SelectionDistance",
+        "Selector",
         "Transform",
+        "CollidedListener",
+        "CollidersDisabledListener",
+        "CollidersDisabledRemovedListener",
         "GroundedListener",
-        "InteractionListener",
+        "InteractedListener",
+        "InteractedRemovedListener",
+        "KinematicListener",
+        "KinematicRemovedListener",
         "PositionListener",
-        "RotationListener"
+        "RigidbodyForceListener",
+        "RigidbodyVelocityListener",
+        "RotationListener",
+        "ScaleListener",
+        "SelectedListener",
+        "SelectedRemovedListener"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Code.GamePlay.Components.CharacterController),
+        typeof(Code.GamePlay.Components.Camera),
         typeof(Code.GamePlay.Components.Collided),
-        typeof(Code.GamePlay.Components.CollisionID),
+        typeof(Code.GamePlay.Components.CollidedEntity),
+        typeof(Code.GamePlay.Components.CollidersDisabled),
+        typeof(Code.GamePlay.Components.Collisionable),
+        typeof(Code.GamePlay.Components.ConnectedCamera),
         typeof(Code.GamePlay.Components.ConnectedEntity),
         typeof(Code.GamePlay.Components.Door),
-        typeof(Code.GamePlay.Components.GravityForce),
+        typeof(Code.GamePlay.Components.ForcedPerspectiveObject),
         typeof(Code.GamePlay.Components.Grounded),
         typeof(Code.GamePlay.Components.Id),
-        typeof(Code.GamePlay.Components.Interaction),
+        typeof(Code.GamePlay.Components.InInteraction),
+        typeof(Code.GamePlay.Components.Interactable),
+        typeof(Code.GamePlay.Components.Interacted),
+        typeof(Code.GamePlay.Components.Interactor),
         typeof(Code.GamePlay.Components.JumpForce),
+        typeof(Code.GamePlay.Components.Kinematic),
+        typeof(Code.GamePlay.Components.LastUpdatedPosition),
         typeof(Code.GamePlay.Components.LookSpeed),
         typeof(Code.GamePlay.Components.LookXLimit),
-        typeof(Code.GamePlay.Components.MoveDirection),
+        typeof(Code.GamePlay.Components.MaxInteractionDistance),
         typeof(Code.GamePlay.Components.MoveSpeed),
+        typeof(Code.GamePlay.Components.ObjectBounds),
+        typeof(Code.GamePlay.Components.OriginalScale),
+        typeof(Code.GamePlay.Components.PhysicalObject),
         typeof(Code.GamePlay.Components.Player),
-        typeof(Code.GamePlay.Components.PlayerCamera),
         typeof(Code.GamePlay.Components.Position),
         typeof(Code.GamePlay.Components.PressurePlate),
+        typeof(Code.GamePlay.Components.RigidbodyForce),
+        typeof(Code.GamePlay.Components.RigidbodyVelocity),
         typeof(Code.GamePlay.Components.Rotation),
+        typeof(Code.GamePlay.Components.Scale),
+        typeof(Code.GamePlay.Components.Selectable),
+        typeof(Code.GamePlay.Components.Selected),
+        typeof(Code.GamePlay.Components.SelectedObject),
+        typeof(Code.GamePlay.Components.SelectionDistance),
+        typeof(Code.GamePlay.Components.Selector),
         typeof(Code.GamePlay.Components.Transform),
+        typeof(CollidedListenerComponent),
+        typeof(CollidersDisabledListenerComponent),
+        typeof(CollidersDisabledRemovedListenerComponent),
         typeof(GroundedListenerComponent),
-        typeof(InteractionListenerComponent),
+        typeof(InteractedListenerComponent),
+        typeof(InteractedRemovedListenerComponent),
+        typeof(KinematicListenerComponent),
+        typeof(KinematicRemovedListenerComponent),
         typeof(PositionListenerComponent),
-        typeof(RotationListenerComponent)
+        typeof(RigidbodyForceListenerComponent),
+        typeof(RigidbodyVelocityListenerComponent),
+        typeof(RotationListenerComponent),
+        typeof(ScaleListenerComponent),
+        typeof(SelectedListenerComponent),
+        typeof(SelectedRemovedListenerComponent)
     };
 }

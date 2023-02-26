@@ -1,10 +1,14 @@
-public enum ControlActionType
+namespace Code.Services
 {
-    None,
+    public enum ControlActionType
+    {
+        None,
     
-    PlayerMoveForwards,
-    PlayerMoveBackwards,
-    PlayerMoveLeft,
-    PlayerMoveRight,
-    PlayerJump
+        PlayerMoveForwards,
+        PlayerMoveBackwards,
+        PlayerMoveLeft,
+        PlayerMoveRight,
+        PlayerJump,
+        PlayerInteract,
+    }
 }

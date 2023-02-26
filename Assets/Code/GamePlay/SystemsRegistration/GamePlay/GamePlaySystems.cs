@@ -2,7 +2,7 @@ using Code.GamePlay.Systems;
 using Code.GamePlay.Systems.Input;
 using Zenject;
 
-namespace Code.GamePlay.SystemsRegistration
+namespace Code.GamePlay.SystemsRegistration.GamePlay
 {
     public class GamePlayFeature : InjectableFeature
     {
@@ -11,8 +11,12 @@ namespace Code.GamePlay.SystemsRegistration
             AddInjected<InitializeCursorSystem>();
             AddInjected<RegisterInputsSystem>();
             AddInjected<EmitInputSystem>();
+            AddInjected<EntitiesComponentsUpdateSystem>();
             AddInjected<PlayerSystems>();
+            AddInjected<InteractionSystem>();
             AddInjected<PressurePlateSystem>();
+            AddInjected<ForcedPerspectiveObjectSelectionSystem>();
+            AddInjected<ForcedPerspectiveSystem>();
         }
     }
 }

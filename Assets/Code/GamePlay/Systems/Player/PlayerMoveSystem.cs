@@ -14,7 +14,7 @@ namespace Code.GamePlay.Systems.Player
         public PlayerMoveSystem(GameContext gameContext, InputContext inputContext)
         {
             _players = gameContext.GetGroup(AllOf(
-                GameMatcher.Player, Position, GameMatcher.Transform, MoveSpeed, GameMatcher.CharacterController));
+                GameMatcher.Player, PhysicalObject, Position, GameMatcher.Transform, MoveSpeed));
             
             _keyboard = inputContext.GetGroup(AllOf(Keyboard, PlayerMotion));
         }
@@ -26,25 +26,23 @@ namespace Code.GamePlay.Systems.Player
             {
                 var moveValue = keyboard.playerMotion.Value;
                 
-                var motion = CalculatePlayerMoveDirection(player, moveValue);
+                var moveVelocity = CalculatePlayerMoveVelocity(player, moveValue);
 
-                var playerController = player.characterController.Value;
-                playerController.Move(motion * Time.deltaTime);
-                
-                player.ReplaceMoveDirection(motion);
-                //player.ReplacePosition(playerController.transform.position);
+                player.ReplaceRigidbodyVelocity(moveVelocity);
             }
         }
         
-        private Vector3 CalculatePlayerMoveDirection(GameEntity player, Vector2 moveValue)
+        private Vector3 CalculatePlayerMoveVelocity(GameEntity player, Vector2 moveValue)
         {
-            var xSpeed = player.moveSpeed.Value * moveValue.x;
-            var ySpeed = player.moveSpeed.Value * moveValue.y;
+            var moveSpeed = player.moveSpeed.Value;
+            
+            var xSpeed = moveSpeed * moveValue.x;
+            var ySpeed = moveSpeed * moveValue.y;
 
             var right = player.transform.Value.right;
             var forward = player.transform.Value.forward;
 
-            return (right * xSpeed + forward * ySpeed).WithNewY(player.moveDirection.Value.y);
+            return right * xSpeed + forward * ySpeed;
         }
     }
 }

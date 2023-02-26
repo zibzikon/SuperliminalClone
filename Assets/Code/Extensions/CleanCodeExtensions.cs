@@ -26,12 +26,17 @@ namespace Code.Extensions
         }
         
         public static void MarkCollidedBy(this GameEntity entity, GameEntity by)
-            => entity.With(x => x.isCollided = true)
-                .With(x => x.ReplaceCollisionID(by.id.Value))
-                .With(x => UnityEngine.Debug.Log($"Entity {x} has collided"));
-        
+        {
+            entity.isCollided = true;
+            entity.ReplaceCollidedEntity(by);
+        }
+
         public static void UnmarkCollided(this GameEntity entity)
-            => entity.With(x => x.isCollided = false)
-                .With(x => x.RemoveCollisionID());
+        {
+            entity.isCollided = false;
+            
+            if(entity.hasCollidedEntity)
+                entity.RemoveCollidedEntity();
+        }
     }
 }

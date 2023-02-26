@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1036570717642515622}
   - component: {fileID: 4142402903524975493}
   m_Layer: 0
-  m_Name: StaticDataInstaller
+  m_Name: DataInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,6 +123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameResourcesData: {fileID: 11400000, guid: a0839ef22abd32e44abe2c8433ebc5f1, type: 2}
   _uiResourcesData: {fileID: 11400000, guid: 05a7f86c4f01f034d925f52092e247bf, type: 2}
+  _collisionData:
+    CollisionableLayers:
+      serializedVersion: 2
+      m_Bits: 65
   _sceneTransitions:
   - <TransitionType>k__BackingField: 0
     <TransitionAssetName>k__BackingField: Prefabs/UI/SceneTansitions/DefaultSceneTransitionWindow

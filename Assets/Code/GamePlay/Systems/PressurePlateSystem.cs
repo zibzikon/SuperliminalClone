@@ -21,9 +21,8 @@ namespace Code.GamePlay.Systems
                 UnityEngine.Debug.Log("Pressure plate system executed");
                 
                 var connectedEntity = pressurePlate.connectedEntity.Value;
-                if (!connectedEntity.hasInteraction) continue;
 
-                connectedEntity.ReplaceInteraction(pressurePlate.isCollided);
+                connectedEntity.isInteracted = pressurePlate.isCollided;
             }
         }
     }

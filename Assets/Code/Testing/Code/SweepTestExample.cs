@@ -1,11 +1,10 @@
 using System;
 using Code.Extensions;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
-namespace Code.Debug.Code
+namespace Code.Testing.Code
 {
-    using UnityEngine;
-
     public class SweepTestExampla : MonoBehaviour
     {
         [SerializeField] private float collisionCheckDistance;

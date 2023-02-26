@@ -1,32 +1,36 @@
 using System.IO;
 using System.Threading.Tasks;
+using Code.Services.Interfaces;
 
-public class BaseDataSaver<T> : IDataSaver<T>
+namespace Code.Services
 {
-    private T _data;
-    private readonly string _savingPath;
-    private readonly IDataSerializer _serializer;
-
-    public BaseDataSaver(T data, string savingPath, IDataSerializer serializer)
+    public class BaseDataSaver<T> : IDataSaver<T>
     {
-        _data = data;
-        _savingPath = savingPath;
-        _serializer = serializer;
-    }
-    
-    
-    public void UpdateData(T data)
-        => _data = data;
+        private T _data;
+        private readonly string _savingPath;
+        private readonly IDataSerializer _serializer;
 
-    public void UpdateData(object data)
-        => _data = (T)data;
+        public BaseDataSaver(T data, string savingPath, IDataSerializer serializer)
+        {
+            _data = data;
+            _savingPath = savingPath;
+            _serializer = serializer;
+        }
     
-    public async Task SaveAsync()
-    {
-        var serialized = _serializer.Serialize(_data);
-        await using var stream = new FileStream(_savingPath, FileMode.OpenOrCreate);
-        await using var writer = new StreamWriter(stream);
+    
+        public void UpdateData(T data)
+            => _data = data;
+
+        public void UpdateData(object data)
+            => _data = (T)data;
+    
+        public async Task SaveAsync()
+        {
+            var serialized = _serializer.Serialize(_data);
+            await using var stream = new FileStream(_savingPath, FileMode.OpenOrCreate);
+            await using var writer = new StreamWriter(stream);
         
-        await writer.WriteAsync(serialized);
+            await writer.WriteAsync(serialized);
+        }
     }
 }

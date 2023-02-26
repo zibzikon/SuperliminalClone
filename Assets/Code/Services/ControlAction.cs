@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public struct ControlAction
+namespace Code.Services
 {
-    public KeyCode KeyCode;
-    public ControlActionType ActionType;
-
-    public ControlAction(KeyCode keyCode, ControlActionType actionType)
+    public struct ControlAction
     {
-        KeyCode = keyCode;
-        ActionType = actionType;
+        public KeyCode KeyCode;
+        public ControlActionType ActionType;
+
+        public ControlAction(KeyCode keyCode, ControlActionType actionType)
+        {
+            KeyCode = keyCode;
+            ActionType = actionType;
+        }
     }
 }

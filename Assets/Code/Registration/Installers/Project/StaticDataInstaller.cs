@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Code.Data;
 using Code.Data.ResourcesData;
 using UnityEngine;
 using Zenject;
@@ -9,6 +10,7 @@ namespace Code.Registration.Installers.Project
     {
         [SerializeField] private GameResourcesData _gameResourcesData;
         [SerializeField] private UIResourcesData _uiResourcesData;
+        [SerializeField] private CollisionData _collisionData;
         
         [SerializeField] private List<SceneTransitionResourceData> _sceneTransitions;
         [SerializeField] private List<LevelPreviewResourceData> _levelsPreviews;
@@ -18,6 +20,7 @@ namespace Code.Registration.Installers.Project
         {
             Container.BindInstance(_gameResourcesData).AsSingle();
             Container.BindInstance(_uiResourcesData).AsSingle();
+            Container.BindInstance(_collisionData).AsSingle();
             
             Container.Bind<IEnumerable<SceneTransitionResourceData>>().FromInstance(_sceneTransitions).AsSingle();
             Container.Bind<IEnumerable<LevelPreviewResourceData>>().FromInstance(_levelsPreviews).AsSingle();

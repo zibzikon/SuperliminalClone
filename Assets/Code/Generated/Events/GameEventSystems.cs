@@ -9,9 +9,20 @@
 public sealed class GameEventSystems : Feature {
 
     public GameEventSystems(Contexts contexts) {
+        Add(new CollidedEventSystem(contexts)); // priority: 0
+        Add(new CollidersDisabledEventSystem(contexts)); // priority: 0
+        Add(new CollidersDisabledRemovedEventSystem(contexts)); // priority: 0
         Add(new GroundedEventSystem(contexts)); // priority: 0
-        Add(new InteractionEventSystem(contexts)); // priority: 0
+        Add(new InteractedEventSystem(contexts)); // priority: 0
+        Add(new InteractedRemovedEventSystem(contexts)); // priority: 0
+        Add(new KinematicEventSystem(contexts)); // priority: 0
+        Add(new KinematicRemovedEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
+        Add(new RigidbodyForceEventSystem(contexts)); // priority: 0
+        Add(new RigidbodyVelocityEventSystem(contexts)); // priority: 0
         Add(new RotationEventSystem(contexts)); // priority: 0
+        Add(new ScaleEventSystem(contexts)); // priority: 0
+        Add(new SelectedEventSystem(contexts)); // priority: 0
+        Add(new SelectedRemovedEventSystem(contexts)); // priority: 0
     }
 }

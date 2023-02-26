@@ -1,12 +1,15 @@
 using System.Threading.Tasks;
 
-public interface IDataSaver
+namespace Code.Services.Interfaces
 {
-    void UpdateData(object data);
-    Task SaveAsync();
-}
+    public interface IDataSaver
+    {
+        void UpdateData(object data);
+        Task SaveAsync();
+    }
 
-public interface IDataSaver<T> : IDataSaver
-{
-    void UpdateData(T data);
+    public interface IDataSaver<T> : IDataSaver
+    {
+        void UpdateData(T data);
+    }
 }

@@ -1,19 +1,23 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Code.Services.Interfaces;
 
-public class GameDataSaver : IGameDataSaver
+namespace Code.Services
 {
-    private readonly IEnumerable<IDataSaver> _dataSavers;
-
-    public GameDataSaver(IEnumerable<IDataSaver> dataSavers)
+    public class GameDataSaver : IGameDataSaver
     {
-        _dataSavers = dataSavers;
-    }
+        private readonly IEnumerable<IDataSaver> _dataSavers;
 
-    public async Task SaveAsync()
-    {
-        foreach (var dataSaver in _dataSavers)
-            await dataSaver.SaveAsync();
-    }
+        public GameDataSaver(IEnumerable<IDataSaver> dataSavers)
+        {
+            _dataSavers = dataSavers;
+        }
 
+        public async Task SaveAsync()
+        {
+            foreach (var dataSaver in _dataSavers)
+                await dataSaver.SaveAsync();
+        }
+
+    }
 }

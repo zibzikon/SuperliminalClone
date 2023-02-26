@@ -2,7 +2,7 @@ using Code.GamePlay.Components;
 using Code.Services.Interfaces;
 using Entitas;
 using UnityEngine;
-using static ControlActionType;
+using static Code.Services.ControlActionType;
 
 namespace Code.GamePlay.Systems.Input
 {
@@ -28,6 +28,9 @@ namespace Code.GamePlay.Systems.Input
             {
                 var mouseAxis = _input.GetMouseAxis();
                 mouse.ReplaceMouseAxis(mouseAxis);
+
+                mouse.isLeftMouse = _input.IsLeftMousePressed();
+                mouse.isRightMouse = _input.IsRightMousePressed();
             }
         }
     }

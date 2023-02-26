@@ -1,6 +1,9 @@
 using System.Threading.Tasks;
 
-public interface IGameDataSaver
+namespace Code.Services.Interfaces
 {
-    Task SaveAsync();
+    public interface IGameDataSaver
+    {
+        Task SaveAsync();
+    }
 }

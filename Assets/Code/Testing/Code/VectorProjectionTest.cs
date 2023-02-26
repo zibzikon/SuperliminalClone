@@ -1,8 +1,7 @@
-
 using Code.Extensions;
 using UnityEngine;
 
-namespace Code.Debug.Code
+namespace Code.Testing.Code
 {
     public class VectorProjectionTest : MonoBehaviour
     {

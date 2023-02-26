@@ -34,6 +34,7 @@ namespace Code.Registration.Installers.Project
             Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
             Container.Bind<ILevelLoader>().To<LevelLoaderWithLoadingVisualization>().AsSingle();
             Container.Bind<IUserInput>().To<UserInput>().AsSingle();
+            Container.Bind<IEntityComponentsUpdatersRegister>().To<EntityComponentsUpdatersRegister>().AsSingle();
             
             Container.Bind<IControlActions>().To<ControlActions>().AsSingle().
                 WithArguments(new ControlAction[]
@@ -43,10 +44,11 @@ namespace Code.Registration.Installers.Project
                     new(KeyCode.A, ControlActionType.PlayerMoveLeft),
                     new(KeyCode.D, ControlActionType.PlayerMoveRight),
                     new(KeyCode.Space, ControlActionType.PlayerJump),
+                    new(KeyCode.Mouse0, ControlActionType.PlayerInteract),
                 });
             
+            Container.Bind<IGameRaycaster>().To<GameRaycaster>().AsSingle();
             Container.Bind<IIdentifierGenerator>().To<IdentifierGenerator>().AsSingle();
-            
             Container.Bind<ISceneLoadingVisualizer>().To<SceneLoadingVisualizer>().AsSingle();
             
             Container.Bind<IGameStateFactory>().To<GameStateFactory>().AsSingle();
